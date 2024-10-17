@@ -115,6 +115,18 @@ export function PartnerList() {
 								className={imageStyle}
 							/>
 						</div>
+						<div
+							className={`flex items-centerjustify-center w-[200px] h-[200px] sm:w-[220px] sm:h-[140px] md:w-[250px] md:h-[150px]`}
+						>
+							<Image
+								src="/partners/gft.png"
+								alt="strategic-sponsor"
+								width={100}
+								height={100}
+								layout="responsive"
+								className={imageStyle}
+							/>
+						</div>
 					</div>
 				</div>
 
@@ -162,7 +174,7 @@ export function PartnerList() {
 				</div>
 
 				{/*----------------------------Silver Sponsors----------------------------*/}
-				<div className="md:p-10">
+				{/* <div className="md:p-10">
 					<h3 className="text-white font-semibold text-[20px] sm:text-[25px] lg:text-[30px] mb-6">
 						Silver Sponsors
 					</h3>
@@ -180,7 +192,7 @@ export function PartnerList() {
 							/>
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 			</Slider>
 		</div>
