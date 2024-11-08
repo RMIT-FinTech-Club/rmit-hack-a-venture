@@ -20,7 +20,7 @@ export default function Home() {
 			<Header />
 			<HeroSection />
 			<AboutUsSection />
-			<Countdown date={new Date(2024, 10, 3)} />
+			<Countdown date={new Date(2024, 10, 11)} />
 			<PartnerSection />
 			<AboutClub />
 			<WhoSection />
