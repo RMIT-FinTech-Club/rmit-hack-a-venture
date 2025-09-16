@@ -8,13 +8,13 @@ import "../css/PartnerSection.css";
 
 export const PartnerSection = () => {
 	return (
-		<div className="bg-black text-center mb-5 md:mt-[100px]" id="hackaventure-sponsors">
+		<div className="text-center mb-5 md:mt-[50px]" id="hackaventure-sponsors">
 			<h1
-				className={`text-[45px] lg:text-[57px] text-center text-white font-semibold md:px-[40px] max-md:mt-[20px] drop-shadow-text`}
+				className={`text-[45px] lg:text-[57px] text-center text-color-gradient font-semibold md:px-[40px] max-md:mt-[20px] drop-shadow-text`}
 			>
 				Our Sponsors
 			</h1>
-			<PartnerList />
+			{/* <PartnerList /> */}
 		</div>
 	);
 };
@@ -47,7 +47,7 @@ export function PartnerList() {
 	const imageStyle = "object-contain"; // Ensure image fits within the div
 
 	return (
-		<div className="slider-container bg-black lg:w-[90vw] p-10 sm:p-0 mx-auto">
+		<div className="slider-container lg:w-[90vw] p-10 sm:p-0 mx-auto">
 			<Slider {...settings}>
 				{/*----------------------------Diamond Sponsors----------------------------*/}
 				<div className="md:p-10">

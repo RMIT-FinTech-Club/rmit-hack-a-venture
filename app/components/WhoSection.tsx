@@ -34,7 +34,7 @@ export const WhoSection = () => {
 
 	return (
 		<div
-			className='md:px-[10vw] md:mt-[100px] max-md:mt-[20px]'
+			className='md:px-[10vw] md:mt-[50px] max-md:mt-[20px]'
 			ref={ref}
 		>
 			<div className='max-md:text-4xl md:text-6xl text-center text-white font-semibold md:px-[40px] max-md:mt-[40px] drop-shadow-text'>
@@ -43,7 +43,7 @@ export const WhoSection = () => {
 					animate={controls}
 					variants={slideVariants}
 					transition={{ duration: 1.3, delay: 0.5 }}
-					className='text-gradient inline-block'>
+					className='text-color-gradient inline-block leading-[6rem]'>
 					Who can join&nbsp;
 				</motion.div>
 				<motion.div

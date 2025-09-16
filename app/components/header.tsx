@@ -34,7 +34,7 @@ const LaptopNav = () => {
 					className={`hover:text-white text-[#9CA3AF] font-normal  cursor-pointer`}
 					style={{
 						textShadow:
-							hoverItemNumber == 1 ? "1px 1px 5px rgba(201, 63, 221, 1)" : "",
+							hoverItemNumber == 1 ? "1px 1px 5px #F37D12" : "",
 					}}
 					onMouseEnter={() => setHoverItemNumber(1)}
 					onMouseLeave={() => setHoverItemNumber(-1)}
@@ -42,12 +42,12 @@ const LaptopNav = () => {
 					<h1>About Hack-A-Venture</h1>
 				</a>
 				<a
-					href="https://docs.google.com/document/d/1O8YfpM47p9qRoE-2Vimq77p2ZAeLQ1-ynD67aE7Ys2Q/edit"
+					href=""
 					target="_blank"
 					className={`hover:text-white text-[#9CA3AF] font-normal  cursor-pointer`}
 					style={{
 						textShadow:
-							hoverItemNumber == 2 ? "1px 1px 5px rgba(201, 63, 221, 1)" : "",
+							hoverItemNumber == 2 ? "1px 1px 5px #F37D12" : "",
 					}}
 					onMouseEnter={() => setHoverItemNumber(2)}
 					onMouseLeave={() => setHoverItemNumber(-1)}
@@ -58,7 +58,7 @@ const LaptopNav = () => {
 					className={`hover:text-white text-[#9CA3AF] font-normal  cursor-pointer`}
 					style={{
 						textShadow:
-							hoverItemNumber == 3 ? "1px 1px 5px rgba(201, 63, 221, 1)" : "",
+							hoverItemNumber == 3 ? "1px 1px 5px #F37D12" : "",
 					}}
 					onMouseEnter={() => setHoverItemNumber(3)}
 					onMouseLeave={() => setHoverItemNumber(-1)}
@@ -69,13 +69,13 @@ const LaptopNav = () => {
 			</div>
 
 			{/*-----------------------------right side ------------------------*/}
-			<div className="h-full w-[320px] flex justify-between items-center">
-				<a href="https://docs.google.com/document/d/1FGA7Ds3eAuEGMV6rF1yvot5bwMmflQaoPDTHylie4JA/edit" target="_blank" className="no-underline font-semibold  text-[#C93FDD]">
-					See Handbook
+			<div className="h-full w-[400px] flex justify-between items-center">
+				<a href="" target="_blank" className="no-underline font-semibold text-color-gradient">
+					See Public Handbook
 				</a>
-				<a href="mailto:rmithackaventure0108@gmail.com" className="no-underline font-semibold  text-[#C93FDD]">Contact Us</a>
-				<button className="px-[15px] py-[5px] rounded-2xl bg-[#B25FD6] hover:bg-[#CA8CE6] text-white font-semibold">
-					<a href="https://docs.google.com/forms/d/1azQmLTEt04oDg3TwJyTmQ-wbzgxiPLibbaQdSiTHtVU/viewform?edit_requested=true" target="_blank">Join Now</a>
+				<a href="mailto:rmithackaventure0108@gmail.com" className="no-underline font-semibold  text-color-gradient">Contact Us</a>
+				<button className="px-[15px] py-[5px] rounded-2xl bg-gradient-to-b from-[#F37D12] to-[#FDE309] text-white font-semibold">
+					<a href="" target="_blank">Join Now</a>
 				</button>
 			</div>
 		</nav>

@@ -38,7 +38,7 @@ const RoundFormatTimeline = () => {
 				rounded={true}
 				numberOfOrder={1}
 				rightSideOfTextSection={true}
-				timeRangeText="Nov 4 – Nov 17, 2024"
+				timeRangeText="Nov 3 – Nov 16, 2025"
 				dashLineColor="#000000 0%, #0EA2FF 47%, #000000 100%"
 				headline="IDEA PROPOSAL"
 				subHeadline=""
@@ -49,7 +49,7 @@ const RoundFormatTimeline = () => {
 				rounded={true}
 				numberOfOrder={2}
 				rightSideOfTextSection={false}
-				timeRangeText="Nov 30 – Dec 13, 2024"
+				timeRangeText="Dec 4 – Dec 17, 2025"
 				headline="BUSINESS & TECHNICAL DOCUMENTATION"
 				dashLineColor="#000000 0%, #10D8D8 47%, #000000 100%"
 				subHeadline=""
@@ -60,7 +60,7 @@ const RoundFormatTimeline = () => {
 				rounded={true}
 				numberOfOrder={3}
 				rightSideOfTextSection={true}
-				timeRangeText="Jan 22 – Jan 23, 2025"
+				timeRangeText="Jan 21 – Jan 22, 2025"
 				headline="HACK DAY"
 				subHeadline="(Prototype & Presentation)"
 				dashLineColor="#000000 0%, #22E29A 47%, #000000 100%"
@@ -75,7 +75,7 @@ const TrainingWorkshopTimeline = () => {
 		<section className="w-[100%] flex flex-col items-center md:mt-[60px]">
 			<RoundedTimelineHeader text="TRAINING WORKSHOPS" />
 			<p className=" hidden lg:inline-block text-[18px] mt-[30px] mb-[40px] text-[#9CA3AF]">
-				To support participants, Hack-A-Venture 2024 will provide a series of
+				To support participants, Hack-A-Venture 2025 will provide a series of
 				workshops
 			</p>
 			<p className="text-white text-[24px] font-bold mb-[10px] mt-[70px] lg:mt-0 max-md:hidden">Workshop</p>
@@ -83,43 +83,43 @@ const TrainingWorkshopTimeline = () => {
 				rounded={false}
 				numberOfOrder={1}
 				rightSideOfTextSection={true}
-				timeRangeText="Nov 11, 2024"
+				timeRangeText="Nov 04, 2025"
 				dashLineColor="#000000 0%, #0EA2FF 47%, #000000 100%"
 				headline="WORKSHOP 01"
-				subHeadline="Design Thinking Training"
-				paragraph="This workshop introduces participants to the design thinking framework, focusing on empathy, ideation, and defining solutions for social challenges."
+				subHeadline="Technology in Business Innovation"
+				paragraph="This workshop provides guidance on identifying the most appropriate technology stack, for example, AI, Blockchain, Cybersecurity, based on the problem statement or business challenge."
 			/>
 
 			<DetailTimeLine
 				rounded={false}
 				numberOfOrder={2}
 				rightSideOfTextSection={false}
-				timeRangeText="Dec 2, 2024"
+				timeRangeText="Nov 10, 2025"
 				dashLineColor="#000000 0%, #10D8D8 47%, #000000 100%"
 				headline="WORKSHOP 02"
-				subHeadline="Business & Technical Framework"
-				paragraph="Teams will learn how to build solid business models and technical documentation, with guidance on how to implement these frameworks effectively."
+				subHeadline="Foundations of Sustainability Thinking"
+				paragraph="This workshop will equip participants with the core principles of sustainability thinking, enabling them to apply sustainable frameworks to decision-making and problem-solving in diverse contexts."
 			/>
 
 			<DetailTimeLine
 				rounded={false}
 				numberOfOrder={3}
 				rightSideOfTextSection={true}
-				timeRangeText="On HackDay 01"
+				timeRangeText="Dec 04, 2025"
 				dashLineColor="#000000 0%, #22E29A 47%, #000000 100%"
 				headline="WORKSHOP 03"
-				subHeadline="UI/UX Design and Pitching Techniques"
-				paragraph="This session will help participants create user-friendly designs and develop compelling presentations for their final pitch."
+				subHeadline="Documentation Training"
+				paragraph="This workshop will train participants on Business & Technical Frameworks that are required for Round 2 submission. These could include Business Model, SWOT Analysis, or Systems Architecture, etc."
 			/>
 			<DetailTimeLine
 				rounded={false}
 				numberOfOrder={4}
 				rightSideOfTextSection={false}
-				timeRangeText="Date TBA"
+				timeRangeText="Jan 21, 2026"
 				dashLineColor="#000000 0%, #22E29A 47%, #000000 100%"
 				headline="WORKSHOP 04"
-				subHeadline="Technical Bootcamp"
-				paragraph="Teams will be trained by industry professionals on how to build AI, Blockchain or Cybersecurity based solutions, with case studies. This workshop is conducted between WS2 and WS3, but specific date will be announced later."
+				subHeadline="Pitching Techniques"
+				paragraph="Participants will be trained on pitching techniques and how to perform their live demostrations to impress judges and achieve the championship!"
 			/>
 		</section>
 	);
@@ -128,10 +128,7 @@ const TrainingWorkshopTimeline = () => {
 const RoundedTimelineHeader: React.FC<{ text: string }> = ({ text }) => {
 	return (
 		<div
-			className="text-[#370f43] text-[20px] lg:text-[24px] font-semibold py-2 px-6 rounded-full text-2xl shadow-md max-md:mt-[24px] md:mt-[70px]"
-			style={{
-				background: "linear-gradient(-20deg, #deb7f0 0%, #f5ebfc 17%, #deb7f0 47%, #ca8ce6 82%, #f5ebfc 100%)",
-			}}
+			className="text-white text-[20px] lg:text-[24px] font-semibold py-2 px-6 rounded-full text-2xl shadow-md max-md:mt-[24px] md:mt-[70px] bg-gradient-to-b from-[#F37D12] to-[#FDE309]"
 		>
 			{text}
 		</div>
@@ -245,7 +242,7 @@ const MilestoneRound: React.FC<{ rounded: boolean; numberOfOrder: number }> = ({
 			className={`${rounded
 				? "rounded-full border-[12px] w-[92px] h-[92px]"
 				: "rounded-lg border-[4px] w-[68px] h-[68px]"
-				} border-[#582768] bg-[#C93FDD] #C93FDDE5 shadow-lg flex items-center justify-center text-[32px] font-bold`}
+				} border-[#F37D12] bg-[#FDE309] shadow-lg flex items-center justify-center text-[32px] font-bold`}
 			style={{
 				boxShadow: "0 0 5px 7px #291231", // Custom shadow
 				// filter: "blur(5px)", // Blur for soft shadow effect
@@ -263,11 +260,11 @@ const TimelineRange: React.FC<{
 	return (
 		<h3
 			className={` flex-shrink-0 w-[220px] text-center text-[16px] lg:text-[18px] font-semibold ${numberOfOrder == 1
-				? "text-[#10D8D8]"
+				? "text-[#91DAAE]"
 				: numberOfOrder == 2
-					? "text-[#10D8D8]"
-					: numberOfOrder == 3 ? "text-[#10D8D8]"
-						: numberOfOrder == 4 && "text-[#10D8D8]"
+					? "text-[#91DAAE]"
+					: numberOfOrder == 3 ? "text-[#91DAAE]"
+						: numberOfOrder == 4 && "text-[#91DAAE]"
 				}`}
 		>
 			{timeRangeText}
@@ -302,13 +299,13 @@ const DashLine: React.FC<{ rightSide: boolean }> = ({ rightSide }) => {
 				: "ml-[0px] mr-[50px]"
 				} `}
 		>
-			<div className="w-4 h-4 rounded-full bg-[#7D139A]" />
+			<div className="w-4 h-4 rounded-full bg-gradient-to-r from-[#F37D12] to-[#FDE309]" />
 			<div
 				className={`${!rightSide ? "right-[15px]" : "left-[10px]"
 					} h-1 w-[70px] -z-10`}
 				style={{
 					background: `linear-gradient(to ${!rightSide ? "left" : "right"
-						}, #7D319A, transparent)`,
+						}, #F37D12, transparent)`,
 				}}
 			/>
 		</div>
@@ -331,7 +328,7 @@ const TextSection: React.FC<{
 				}`}
 		>
 			<h1
-				className={`text-[#C93FDD] lg:text-[28px] text-[24px] font-bold ${headLine == "" && "hidden"
+				className={`text-color-gradient lg:text-[28px] text-[24px] font-bold ${headLine == "" && "hidden"
 					}`}
 			>
 				{headLine}

@@ -1,30 +1,34 @@
 import type { Metadata } from "next";
-import Head from "next/head";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
+// 2. Configure the font
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+// Add icons and other metadata to this object
 export const metadata: Metadata = {
-	title: "RMIT Hack-A-Venture 2024",
-	description: "This competition aims to bridge the gap between technical expertise and business strategy by having students leverage Artificial Intelligence, Blockchain and Cybersecurity, to create realistic and impactful solutions advancing UN SDGs in Vietnam.",
+  title: "RMIT Hack-A-Venture 2025",
+  description: "This competition aims to bridge the gap between technical expertise and business strategy by having students leverage cutting-edge technologies such as AI, Blockchain, Cybersecurity, etc. to develop innovative products that address challenges related to the United Nations Sustainable Development Goals (SDGs) in Vietnam.",
+  icons: {
+    icon: "./icon.png",
+  },
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<Head>
-				<title>RMIT Hack-A-Venture 2024</title>
-				<link rel="icon" href="/icon.ico" />
-				<meta name="description" content="This competition aims to bridge the gap between technical expertise and business strategy by having students leverage Artificial Intelligence, Blockchain and Cybersecurity, to create realistic and impactful solutions advancing UN SDGs in Vietnam." />
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-				<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-			</Head>
-			<body className="antialiased">
-				{children}
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body className={`${poppins.className} bg-gradient-to-b from-[#10382C] to-[#0A1B15] antialiased`}>
+        {children}
+      </body>
+    </html>
+  );
 }

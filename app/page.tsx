@@ -15,23 +15,23 @@ import { WorkshopTimeline } from "./components/WorkshopTimeline";
 import { BackToTopButton } from "./components/BackToTopButton";
 
 export default function Home() {
-	return (
-		<div>
-			<Header />
-			<HeroSection />
-			<AboutUsSection />
-			<Countdown date={new Date(2024, 10, 11)} />
-			<PartnerSection />
-			<AboutClub />
-			<WhoSection />
-			<ThemeSection />
-			<WorkshopTimeline />
-			<PrizeSection />
-			<SponsoredPrizeSection />
-			<JudgeSection />
-			<MentorSection />
-			<BackToTopButton />
-			<Footer />
-		</div>
-	);
+  return (
+    <div>
+      <Header />
+      <HeroSection />
+      <AboutUsSection />
+      <Countdown date={"2025-12-11"} />
+      <PartnerSection />
+      <AboutClub />
+      <WhoSection />
+      <ThemeSection />
+      <WorkshopTimeline />
+      <PrizeSection />
+      {/* <SponsoredPrizeSection /> */}
+      {/* <JudgeSection />
+      <MentorSection /> */}
+      <BackToTopButton />
+      <Footer />
+    </div>
+  );
 }
