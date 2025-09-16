@@ -39,9 +39,9 @@ export const PrizeSection = () => {
 				variants={variants}
 				transition={{ duration: 1.3, delay: 0.2 }}
 			>
-				<span ref={ref} className="max-md:text-4xl md:text-6xl text-center text-white font-semibold md:px-[40px] max-md:mt-[20px] drop-shadow-text">Hack-A-Venture <span className='text-[#C93FDD]'>Prizes</span></span>
+				<span ref={ref} className="max-md:text-4xl md:text-6xl text-center text-white font-semibold md:px-[40px] max-md:mt-[20px] drop-shadow-text">Hack-A-Venture <span className='text-color-gradient'>Prizes</span></span>
 				<p className='md:mt-[24px] text-xl font-sans text-white max-md:mt-[16px]'>
-					Prize components will include <span className='font-bold text-[#C93FDD]'>GotIt Vouchers</span>, <span className='font-bold text-[#C93FDD]'>Course Scholarships</span> and <span className='font-bold text-[#C93FDD]'>Medals</span>
+					Prize components will include <span className='font-bold text-color-gradient'>GotIt Vouchers</span>, <span className='font-bold text-color-gradient'>Course Scholarships</span> and <span className='font-bold text-color-gradient'>Medals</span>
 				</p>
 			</motion.div>
 			<div className='md:flex md:flex-wrap md:gap-48 text-[#FBF6FD] max-md:grid max-md:grid-cols-2 md:mx-auto max-md:px-[60px] justify-center items-center max-md:gap-x-[40px] md:mt-[80px] max-md:w-full max-md:mt-[24px]'>
@@ -98,16 +98,16 @@ export const PrizeSection = () => {
 					</motion.div>
 				</div>
 			</div>
-			<motion.div
+			{/* <motion.div
 				animate={controls}
 				initial="hidden"
 				variants={variants}
 				transition={{ duration: 1.3, delay: 1.5 }}
 			>
 				<Image src="/Rectangle.png" alt="light" className="light-effect" width={726.1} height={68.34} />
-			</motion.div>
+			</motion.div> */}
 
-			<motion.div
+			{/* <motion.div
 				animate={controls}
 				initial="hidden"
 				variants={variants}
@@ -141,7 +141,7 @@ export const PrizeSection = () => {
 					</div>
 
 				</div>
-			</motion.div>
+			</motion.div> */}
 		</div >
 	)
 }

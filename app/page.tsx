@@ -13,6 +13,7 @@ import { ThemeSection } from "./components/ThemeSection";
 import { WhoSection } from "./components/WhoSection";
 import { WorkshopTimeline } from "./components/WorkshopTimeline";
 import { BackToTopButton } from "./components/BackToTopButton";
+import { AcademicMentor } from "./components/AcademicMentor";
 
 export default function Home() {
   return (
@@ -21,15 +22,16 @@ export default function Home() {
       <HeroSection />
       <AboutUsSection />
       <Countdown date={"2025-12-11"} />
-      <PartnerSection />
+      {/* <PartnerSection /> */}
       <AboutClub />
       <WhoSection />
       <ThemeSection />
       <WorkshopTimeline />
       <PrizeSection />
       {/* <SponsoredPrizeSection /> */}
-      {/* <JudgeSection />
-      <MentorSection /> */}
+      {/* <JudgeSection /> */}
+      {/* <MentorSection /> */}
+      <AcademicMentor />
       <BackToTopButton />
       <Footer />
     </div>

@@ -1,146 +1,170 @@
-'use client'
-import Image from 'next/image'
-import React, { useState } from 'react'
-import '../css/ThemeSection.css'
-import { motion } from 'framer-motion'
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import "../css/ThemeSection.css";
+import { motion, AnimatePresence } from "framer-motion";
+
+const themeData = [
+  {
+    id: "0",
+    type: "theme",
+    iconSrc: "/green-footprint.png",
+    alt: "green",
+    text: "Open Innovation for a Green Vietnam",
+    imageSrc: "/GreenVietnam.png",
+  },
+  {
+    id: "1",
+    type: "tech",
+    iconSrc: "/smart_toy.png",
+    alt: "AI",
+    text: "Artificial Intelligence (AI)",
+    imageSrc: "/AI.png",
+  },
+  {
+    id: "2",
+    type: "tech",
+    iconSrc: "/currency_bitcoin.png",
+    alt: "bitcoin",
+    text: "Blockchain Technology",
+    imageSrc: "/Blockchain.png",
+  },
+  {
+    id: "3",
+    type: "tech",
+    iconSrc: "/encrypted.png",
+    alt: "encrypted",
+    text: "Cybersecurity Technology",
+    imageSrc: "/Cybersecurity.png",
+  },
+];
+
+// Reusable component for list items
+type ThemeItemProps = {
+  item: {
+    id: string;
+    type: string;
+    iconSrc: string;
+    alt: string;
+    text: string;
+    imageSrc: string;
+  };
+  selectedId: string;
+  setSelectedId: (id: string) => void;
+};
+
+const ThemeItem: React.FC<ThemeItemProps> = ({
+  item,
+  selectedId,
+  setSelectedId,
+}) => (
+  <div className="flex flex-row items-center gap-11 my-auto max-md:border-[1px] max-md:border-[#374151] max-md:rounded-lg max-md:p-4">
+    <Image
+      className="w-[30px] h-[30px]"
+      src={item.iconSrc}
+      alt={item.alt}
+      width={20}
+      height={20}
+    />
+    <div
+      className={`drop-shadow-container hover:cursor-pointer hover:text-color-gradient ${
+        selectedId === item.id ? "drop-shadow-text" : ""
+      }`}
+      onClick={() => setSelectedId(item.id)}
+    >
+      <div
+        className={`text-[1.5rem] font-semibold font-sans ${
+          selectedId === item.id 
+            ? item.id === "0" 
+              ? "text-[#91DAAE]" 
+              : "text-color-gradient" 
+            : "text-white" 
+        }`}
+      >
+        {item.text}
+      </div>
+    </div>
+  </div>
+);
 
 export const ThemeSection = () => {
-	const [isHovered, setIsHovered] = useState("1");
+  const [selectedId, setSelectedId] = useState("0");
 
-	return (
-		<div className='md:px-[10vw] md:py-[20px] w-full max-md:px-[16px] max-md:pt-[40px]'>
-			<div className='md:grid md:grid-cols-10 w-full md:pt-[80px]'>
-				<div className='md:col-span-5 w-full h-full'>
-					<div className='drop-shadow-container'>
-						<h1 className='text-white md:text-7xl max-md:text-4xl font-bold drop-shadow-text font-sans'>
-							Our Themes <br />
-							and <br /> Tech Focus
-						</h1>
-					</div>
-					<p className='md:mt-[24px] font-sans text-white max-md:mt-[16px]'>
-						Participants are required to leverage one or more of the following technologies:
-					</p>
+  const selectedItem = themeData.find((item) => item.id === selectedId);
 
-					<div className="grid grid-rows-3 md:mt-[25px] md:gap-[50px] max-md:mt-[32px] max-md:gap-[12px]">
-						<div className='flex flex-row items-center gap-11 my-auto max-md:border-[1px] max-md:border-[#374151] max-md:rounded-lg max-md:p-4'>
-							<Image
-								className='w-[20px] h-[20px]'
-								src='/smart_toy.png'
-								alt='AI'
-								width={1000}
-								height={1000}
-							/>
-							<div className={`drop-shadow-container hover:cursor-pointer hover:text-color-gradient ${isHovered === "1" ? 'drop-shadow-text' : ''}`} onClick={() => setIsHovered("1")}>
-								<div className={`text-white text-xl font-semibold font-sans ${isHovered === "1" ? 'text-color-gradient' : ''}`}>Artificial Intelligence (AI)</div>
-							</div>
-						</div>
-						<div className='flex flex-row items-center gap-11 my-auto max-md:border-[1px] max-md:border-[#374151] max-md:rounded-lg max-md:p-4'>
-							<Image
-								className='w-[20px] h-[20px]'
-								src='/currency_bitcoin.png'
-								alt='bitcoin'
-								width={1000}
-								height={1000}
-							/>
-							<div className={`drop-shadow-container hover:cursor-pointer hover:text-color-gradient ${isHovered === "2" ? 'drop-shadow-text' : ''}`} onClick={() => setIsHovered("2")}>
-								<div className={`text-white text-xl font-semibold font-sans ${isHovered === "2" ? 'text-color-gradient' : ''}`}>Blockchain Technology</div>
-							</div>
-						</div>
-						<div className='flex flex-row items-center gap-11 my-auto max-md:border-[1px] max-md:border-[#374151] max-md:rounded-lg max-md:p-4'>
-							<Image
-								className='w-[20px] h-[20px]'
-								src='/encrypted.png'
-								alt='encrypted'
-								width={1000}
-								height={1000}
-							/>
-							<div className={`drop-shadow-container hover:cursor-pointer hover:text-color-gradient ${isHovered === "3" ? 'drop-shadow-text' : ''}`} onClick={() => setIsHovered("3")}>
-								<div className={`text-white text-xl font-semibold font-sans ${isHovered === "3" ? 'text-color-gradient' : ''}`}>Cybersecurity Technology</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className='md:col-span-5 object-cover max-md:hidden md:w-[500px] mx-auto'>
-					{(() => {
-						switch (isHovered) {
-							case "1":
-								return (
-									<motion.div
-										key={"AI"}
-										initial={{ opacity: 0, y: 100 }}
-										animate={{ opacity: 1, y: 0 }}
-										transition={{ duration: 0.5 }}
-									>
-										<Image
-											className='justify-self-end object-cover rounded-[2rem]'
-											src='/AI.png'
-											alt='theme'
-											width={1000}
-											height={1000}
-										/>
-									</motion.div>
-								)
-							case "2":
-								return (
-									<motion.div
-										key={"Blockchain"}
-										initial={{ opacity: 0, y: 100 }}
-										animate={{ opacity: 1, y: 0 }}
-										transition={{ duration: 0.5 }}
-									>
-										<Image
-											className='justify-self-end object-cover rounded-[2rem]'
-											src='/Blockchain.png'
-											alt='theme'
-											width={1000}
-											height={1000}
-										/>
-									</motion.div>
-								)
-							case "3":
-								return (
-									<motion.div
-										key={"Cybersecurity"}
-										initial={{ opacity: 0, y: 100 }}
-										animate={{ opacity: 1, y: 0 }}
-										transition={{ duration: 0.5 }}
-									>
-										<Image
-											className='justify-self-end object-cover rounded-[2rem]'
-											src='/Cybersecurity.png'
-											alt='theme'
-											width={1000}
-											height={1000}
-										/>
-									</motion.div>
-								)
-							default:
-								return (
-									<motion.div
-										key={"AI"}
-										initial={{ opacity: 0, y: 100 }}
-										animate={{ opacity: 1, y: 0 }}
-										transition={{ duration: 0.5 }}
-									>
+  return (
+    <div className="md:px-[10vw] md:py-[20px] w-full max-md:px-[16px] max-md:pt-[40px]">
+      <div className="md:grid md:grid-cols-10 w-full md:pt-[80px]">
+        <div className="md:col-span-5 w-full h-full">
+          <div className="drop-shadow-container">
+            <h1 className="text-green-color-gradient md:text-6xl md:pb-4 max-md:text-4xl font-bold drop-shadow-green-text font-sans">
+              Our Theme
+            </h1>
+          </div>
 
-										return <Image
-											className='justify-self-end object-cover rounded-[2rem]'
-											src='/AI.png'
-											alt='theme'
-											width={1000}
-											height={1000}
-										/>
-									</motion.div>
-								)
-						}
-					})()}
-				</div>
-			</div>
-			<div className='md:mt-[50px] md:py-[20px] max-md:mt-[32px]'>
-				<span className='text-white text-xl font-normal font-sans'>
-					These technologies will be used to develop innovative solutions to address social challenges within Vietnam. The specific social issues related to <span className='text-color-gradient font-bold'>Sustainable Development Goals (SDGs)</span> will be revealed at the start of Round 1. Teams will be challenged to create solutions that are not only technologically sound but also practical and scalable in real-world scenarios.
-				</span>
-			</div>
-		</div>
-	)
-}
+          <ThemeItem
+            item={themeData[0]}
+            selectedId={selectedId}
+            setSelectedId={setSelectedId}
+          />
+
+          <div className="drop-shadow-container mt-8">
+            <h1 className="text-color-gradient md:text-6xl max-md:text-4xl font-bold drop-shadow-text font-sans">
+              Our Tech Focus
+            </h1>
+          </div>
+          <h3 className="md:mt-[24px] md:max-w-[40vw] font-sans text-white max-md:mt-[16px]">
+            Participants are required to leverage one of the following
+            technologies or more:
+          </h3>
+
+          <div className="grid grid-rows-3 md:mt-[25px] md:gap-[20px] max-md:mt-[32px] max-md:gap-[6px]">
+            {themeData
+              .filter((item) => item.type === "tech")
+              .map((item) => (
+                <ThemeItem
+                  key={item.id}
+                  item={item}
+                  selectedId={selectedId}
+                  setSelectedId={setSelectedId}
+                />
+              ))}
+          </div>
+        </div>
+
+        <div className="md:col-span-5 object-cover max-md:hidden md:w-[32vw] mx-auto">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedItem?.id || "default"}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Image
+                className="justify-self-end object-cover rounded-[2rem]"
+                src={selectedItem?.imageSrc || "/GreenVietnam.png"}
+                alt={selectedItem?.alt || "theme"}
+                width={1000}
+                height={1000}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+      <div className="md:mt-[50px] md:py-[20px] max-md:mt-[32px]">
+        <span className="text-white text-xl font-normal font-sans">
+          These technologies will be used to develop innovative solutions to
+          address social challenges within Vietnam. The specific social issues
+          related to{" "}
+          <span className="text-color-gradient font-bold">
+            Sustainable Development Goals (SDGs)
+          </span>{" "}
+          will be revealed at the start of Round 1. Teams will be challenged to
+          create solutions that are not only technologically sound but also
+          practical and scalable in real-world scenarios.
+        </span>
+      </div>
+    </div>
+  );
+};

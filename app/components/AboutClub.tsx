@@ -72,7 +72,7 @@ export const AboutClub = () => {
     <div>
       <div className="px-[16px] md:mt-[50px] max-md:mt-[20px]">
         {/* Text Section */}
-        <div className="w-fit text-left pl-[5vw]">
+        <div className="w-fit text-left pl-[4vw]">
           <h1 className="text-color-gradient text-[2rem] font-semibold font-sans">
             Competition Organizer
           </h1>
@@ -81,10 +81,10 @@ export const AboutClub = () => {
       <div className="w-screen flex-col justify-start items-center p-side-margin-mobile md:px-20 gap-6 md:gap-12 flex">
         <div className=" justify-start items-center gap-6 md:gap-[60px] flex flex-col md:flex-row ">
           <div className="w-full md:w-[45vw] h-full relative">
-            <h1 className="text-[#4557f3] text-[4rem] font-black uppercase mb-[0.5rem]">
+            <h1 className="text-[#2C305F] drop-shadow-club-text text-[4rem] font-black uppercase mb-[0.5rem]">
               <span className="text-[#DCB968]">Fin</span>Tech Club
             </h1>
-			<h1 className="text-white drop-shadow-text text-[4rem] font-black uppercase mb-[0.5rem]">
+            <h1 className="text-white drop-shadow-text text-[4rem] font-black uppercase mb-[0.5rem]">
               Who are we?
             </h1>
 
@@ -264,9 +264,7 @@ export const AboutClub = () => {
           variants={titleVariants}
           transition={{ duration: 1.3 }}
         >
-          <h1
-            className="max-md:hidden md:text-6xl text-3xl font-bold font-sans text-center md:mb-[48px] text-color-gradient"
-          >
+          <h1 className="max-md:hidden md:text-6xl text-3xl font-bold font-sans text-center md:mb-[48px] text-color-gradient">
             Our previous activities
           </h1>
 
@@ -364,7 +362,7 @@ export const AboutClub = () => {
               <div className="p-3 md:p-3">
                 <Image
                   src="/activities_2.png"
-                  alt="About FinTech Club 1"
+                  alt="About FinTech Club 2"
                   width={4000}
                   height={4000}
                 />
@@ -372,7 +370,7 @@ export const AboutClub = () => {
               <div className="p-3 md:p-3">
                 <Image
                   src="/activities_3.png"
-                  alt="About FinTech Club 1"
+                  alt="About FinTech Club 3"
                   width={4000}
                   height={4000}
                 />
@@ -380,7 +378,7 @@ export const AboutClub = () => {
               <div className="p-3 md:p-3">
                 <Image
                   src="/activities_4.png"
-                  alt="About FinTech Club 1"
+                  alt="About FinTech Club 4"
                   width={4000}
                   height={4000}
                 />
@@ -394,11 +392,12 @@ export const AboutClub = () => {
           variants={titleVariants}
           transition={{ duration: 1.3, delay: 1.8 }}
         >
-          <p className="text-lg items-center justify-center text-center text-white md:px-[160px] md:mt-[48px] max-md:mt-[32px] max-md:hidden">
+          <p className="text-lg items-center justify-center text-center text-white md:px-[100px] md:mt-[48px] max-md:mt-[32px] max-md:hidden">
             Through various initiatives such as workshops, events, training
-            programs, and competitions like Hack-A-Venture, the club empowers
-            students to explore the future of financial technology and make a
-            meaningful impact in the community.
+            programs, and competitions like{" "}
+            <span className="text-color-gradient font-semibold">Hack-A-Venture</span>, the
+            club empowers students to explore the future of financial technology
+            and make a meaningful impact in the community.
           </p>
         </motion.div>
         <motion.div
@@ -407,11 +406,12 @@ export const AboutClub = () => {
           variants={titleVariants}
           transition={{ duration: 1.3, delay: 0 }}
         >
-          <p className="text-lg items-center justify-center text-center text-white md:px-[160px] md:mt-[48px] max-md:mt-[32px] md:hidden">
+          <p className="text-lg items-center justify-center text-center text-white md:px-[100px] md:mt-[48px] max-md:mt-[32px] md:hidden">
             Through various initiatives such as workshops, events, training
-            programs, and competitions like Hack-A-Venture, the club empowers
-            students to explore the future of financial technology and make a
-            meaningful impact in the community.
+            programs, and competitions like{" "}
+            <span className="text-color-gradient font-semibold">Hack-A-Venture</span>, the
+            club empowers students to explore the future of financial technology
+            and make a meaningful impact in the community.
           </p>
         </motion.div>
       </div>

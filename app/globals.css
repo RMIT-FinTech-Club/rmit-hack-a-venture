@@ -38,8 +38,16 @@ body {
 	/* Add smooth transition */
 }
 
+.drop-shadow-green-text {
+	filter: drop-shadow(1px 1px 4.2px #00A36C);
+}
+
 .drop-shadow-text {
 	filter: drop-shadow(1px 1px 4.2px #F37D12);
+}
+
+.drop-shadow-club-text {
+	filter: drop-shadow(1px 1px 4.2px #DCB968);
 }
 
 .hover\:drop-shadow-text:hover {
@@ -68,6 +76,13 @@ body {
 
 .text-color-gradient {
   background-image: linear-gradient(to bottom, #F37D12, #FDE309);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-green-color-gradient {
+  background-image: linear-gradient(to bottom, #01985C, #2DC6D2);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
