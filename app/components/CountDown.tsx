@@ -226,7 +226,7 @@ const FlipContainer = ({
         // h="264.67px"
         bgColor="#12161C"
         rounded="18.51px"
-        className="md:w-[267px] md:h-[230px] max-md:w-[150px] max-md:h-[110px]"
+        className="md:w-[267px] md:h-[230px] max-md:w-[137px] max-md:h-[110px]"
         sx={{ perspective: "800px", perspectiveOrigin: "50% 50%" }}
       >
         <StaticCard position="upper" unit={current} />
@@ -238,7 +238,6 @@ const FlipContainer = ({
       {/* Text */}
       <Center py={20}>
         <Text
-          // fontSize={"47.61px"}
           className="md:text-4xl text-lg font-sans font-semibold"
           fontWeight="light"
           textTransform="uppercase"
@@ -268,7 +267,7 @@ const renderer: CountdownRendererFn = ({
   return (
     <Center>
       <HStack>
-        <div className="grid grid-cols-4 gap-4 md:mt-[30px] max-md:mt-[40px] max-md:gap-x-[40px]">
+        <div className="grid grid-cols-4 gap-4 mt-[30px] max-md:gap-x-[30px]">
           <FlipContainer number={days} title="days" />
           <FlipContainer number={hours} title="hours" />
           <FlipContainer number={minutes} title="mins" />
@@ -288,9 +287,9 @@ export const Countdown = ({ date }: Pick<CountdownProps, "date">) => {
     return null;
   }
   return (
-    <div className="md:mt-[50px]">
+    <div className="md:mt-[50px] mt-[30px] px-10">
       <h1
-        className={`max-md:text-4xl md:text-[3.65rem] text-center md:leading-[5rem] text-color-gradient font-semibold md:px-[40px] drop-shadow-text`}
+        className={`max-md:text-3xl md:text-[3.65rem] text-center md:leading-[5rem] text-color-gradient font-semibold drop-shadow-text`}
       >
         Countdown before registration closes
       </h1>

@@ -93,11 +93,11 @@ export const ThemeSection = () => {
   const selectedItem = themeData.find((item) => item.id === selectedId);
 
   return (
-    <div className="md:px-20 md:pb-[20px] w-full max-md:px-[16px] max-md:pt-[40px]">
+    <div className="md:px-20 md:pb-[20px] w-full max-md:px-10 max-md:pt-[30px]">
       <div className="md:grid md:grid-cols-10 w-full md:pt-[80px]">
         <div className="md:col-span-5 w-full h-full">
           <div className="drop-shadow-container">
-            <h1 className="text-green-color-gradient md:text-6xl md:pb-4 max-md:text-4xl font-bold drop-shadow-green-text font-sans">
+            <h1 className="text-green-color-gradient md:text-6xl pb-4 max-md:text-3xl font-bold drop-shadow-green-text font-sans">
               Our Theme
             </h1>
           </div>
@@ -109,16 +109,16 @@ export const ThemeSection = () => {
           />
 
           <div className="drop-shadow-container mt-8">
-            <h1 className="text-color-gradient md:text-6xl max-md:text-4xl font-bold drop-shadow-text font-sans">
+            <h1 className="text-color-gradient md:text-6xl max-md:text-3xl font-bold drop-shadow-text font-sans">
               Our Tech Focus
             </h1>
           </div>
-          <h3 className="md:mt-4 font-sans text-lg text-white max-md:mt-[16px]">
+          <h3 className="md:mt-4 font-sans text-lg text-white font-medium max-md:mt-[16px]">
             Participants are required to leverage one of the following
             technologies or more:
           </h3>
 
-          <div className="grid grid-rows-3 md:mt-[25px] md:gap-[20px] max-md:mt-[32px] max-md:gap-[6px]">
+          <div className="grid grid-rows-3 md:mt-[25px] md:gap-[20px] max-md:mt-[25px] max-md:gap-[10px]">
             {themeData
               .filter((item) => item.type === "tech")
               .map((item) => (
@@ -153,11 +153,11 @@ export const ThemeSection = () => {
         </div>
       </div>
       <div className="md:mt-[50px] md:py-[20px] max-md:mt-[32px]">
-        <span className="text-white text-xl text-justify font-medium font-sans">
+        <span className="text-white text-lg text-justify md:text-xl font-medium font-sans">
           These technologies will be used to develop innovative solutions to
           address social challenges within Vietnam. The specific social issues
           related to{" "}
-          <span className="text-color-gradient font-bold">
+          <span className="text-color-gradient">
             Sustainable Development Goals (SDGs)
           </span>{" "}
           will be revealed at the start of Round 1. Teams will be challenged to

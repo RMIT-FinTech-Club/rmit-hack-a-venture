@@ -143,17 +143,17 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <div className="md:hidden">
-        <div className="mb-[16px] text-5xl justify-center mx-auto text-center">
-          <h1 className="text-white drop-shadow-text font-sans font-bold mt-[40px]">
+      <div className="md:hidden px-6">
+        <div className="mb-[16px] text-5xl justify-center text-center">
+          <h1 className="text-white drop-shadow-text font-sans font-extrabold mt-[40px]">
             RMIT 2025
           </h1>
-          <h1 className="text-color-gradient drop-shadow-text font-sans font-bold">
+          <h1 className="text-color-gradient drop-shadow-text font-sans font-extrabold mt-[20px]">
             Hack-A-Venture
           </h1>
         </div>
 
-        <div className="text-white my-[16px] font-sans font-normal text-center mx-[20px] mt-[24px]">
+        <div className="text-white text-lg my-[16px] font-sans font-medium text-center mx-[20px] mt-[24px]">
           Organized by RMIT Vietnam FinTech Club, Hack-A-Venture is a
           hackathon-style innovation competition for{" "}
           <span className="font-bold text-color-gradient inline-block">

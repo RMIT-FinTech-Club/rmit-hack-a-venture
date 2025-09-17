@@ -56,7 +56,7 @@ export const PrizeSection = () => {
   return (
     <div
       ref={ref}
-      className="text-white flex flex-col md:mt-[120px] max-md:px-[16px] max-md:mt-[20px] text-center"
+      className="text-white flex flex-col md:mt-[120px] max-md:px-10 max-md:mt-[20px] text-center"
     >
       {/* --- HEADING SECTION --- */}
       <motion.div
@@ -65,14 +65,14 @@ export const PrizeSection = () => {
         variants={variants}
         transition={{ duration: 1.3, delay: 0.2 }}
       >
-        <span className="max-md:text-4xl md:text-6xl text-center text-white font-semibold md:px-[40px] max-md:mt-[20px] drop-shadow-text">
+        <span className="max-md:text-3xl md:text-6xl text-center text-white font-semibold md:px-[40px] drop-shadow-text">
           Hack-A-Venture <span className="text-color-gradient">Prizes</span>
         </span>
-        <p className="md:mt-[24px] text-xl font-medium font-sans text-white max-md:mt-[16px]">
+        <p className="md:mt-[24px] text-lg md:text-xl font-medium font-sans text-white max-md:mt-[10px]">
           Prize components will include{" "}
-          <span className="font-bold text-color-gradient">GotIt Vouchers</span>,{" "}
-          <span className="font-bold text-color-gradient">Course Scholarships</span> and{" "}
-          <span className="font-bold text-color-gradient">Medals</span>
+          <span className="text-color-gradient">GotIt Vouchers</span>,{" "}
+          <span className="text-color-gradient">Course Scholarships</span> and{" "}
+          <span className="text-color-gradient">Medals</span>
         </p>
       </motion.div>
 

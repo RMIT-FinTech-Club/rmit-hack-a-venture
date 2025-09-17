@@ -24,7 +24,7 @@ export const Footer = () => {
 
 const SocialMediaList = () => {
   return (
-    <div className="flex flex-col gap-[20px]">
+    <div className="flex flex-col items-center md:items-start gap-[20px]">
       {/*--------- text effect ---------*/}
       <div className="relative">
         <h2 className="inline-block text-color-gradient drop-shadow-text text-[18px] font-semibold">
@@ -119,7 +119,7 @@ const SocialMediaList = () => {
 
 const OrganizerList = () => {
   return (
-    <div className="flex flex-col gap-[20px]">
+    <div className="flex flex-col items-center md:items-start gap-[20px]">
       {/*--------- text effect ---------*/}
       <div className="relative">
         <h2 className="inline-block text-color-gradient drop-shadow-text text-[18px] font-semibold">
@@ -159,7 +159,7 @@ const OrganizerList = () => {
 };
 const ContactList = () => {
   return (
-    <div className="flex flex-col gap-[20px]">
+    <div className="flex flex-col items-center md:items-start gap-[20px]">
       {/*--------- text effect ---------*/}
       <div className="relative">
         <h2 className="inline-block text-color-gradient drop-shadow-text text-[18px] font-semibold">
@@ -175,7 +175,7 @@ const ContactList = () => {
       </div>
 
       {/*---------------------------- contact list section ---------------------*/}
-      <div className="flex flex-col gap-[20px]">
+      <div className="flex flex-col items-center md:items-start gap-[20px]">
         <div className="flex gap-[15px] items-start lg:items-center">
           <BiSolidPhoneCall className="text-[24px] mt-[5px] lg:m-0 text-white" />
           <div className="text-[16px]">

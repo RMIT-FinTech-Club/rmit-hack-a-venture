@@ -29,14 +29,14 @@ export const WhoSection = () => {
   };
 
   return (
-    <div className="md:px-20 md:mt-[40px] max-md:mt-[20px]" ref={ref}>
-      <div className="max-md:text-4xl md:text-6xl text-center text-white font-semibold md:px-[40px] max-md:mt-[40px] drop-shadow-text">
+    <div className="md:px-20 md:mt-[40px] max-md:px-10" ref={ref}>
+      <div className="max-md:text-3xl md:text-6xl max-md:py-6 text-center text-white font-semibold drop-shadow-text">
         <motion.div
           initial="hidden"
           animate={controls}
           variants={slideVariants}
           transition={{ duration: 1.3, delay: 0.5 }}
-          className="text-color-gradient inline-block leading-[6rem]"
+          className="text-color-gradient inline-block md:leading-[5rem]"
         >
           Who can join&nbsp;
         </motion.div>
@@ -51,7 +51,7 @@ export const WhoSection = () => {
         </motion.div>
       </div>
 
-      <div className="grid md:grid-cols-5 max-md:grid-cols-3 max-md:grid-flow-row md:gap-10 max-md:gap-4 md:mt-[48px] max-md:mt-[20px] max-md:px-12 justify-items-center">
+      <div className="grid md:grid-cols-5 max-md:grid-cols-3 max-md:grid-flow-row md:gap-10 max-md:gap-6 md:mt-[48px] justify-items-center">
         {/* RENDER THE FIRST 3 ITEMS */}
         {Array.from({ length: 3 }).map((_, index) => (
           <div key={index} className="w-full">
@@ -77,7 +77,7 @@ export const WhoSection = () => {
         <div className="max-md:col-span-3 flex justify-center md:contents max-md:gap-4">
           {/* Loop for items 4 and 5 */}
           {Array.from({ length: 2 }).map((_, index) => (
-            <div key={index + 3} className="w-[28vw] md:w-full">
+            <div key={index + 3} className="w-[27vw] md:w-full">
               <motion.div
                 initial="hidden"
                 animate={controls}
@@ -119,9 +119,9 @@ export const WhoSection = () => {
         variants={swipeVariants}
         transition={{ duration: 1.3, delay: 0 }}
       >
-        <p className="text-lg items-center justify-center text-center text-white max-md:mt-[32px] max-md:px-12 md:hidden">
+        <p className="text-lg font-medium items-center justify-center text-justify text-white max-md:mt-[32px] md:hidden">
           Our competition is open for{" "}
-          <span className="text-color-gradient font-semibold">
+          <span className="text-color-gradient">
             all inspiring students
           </span>{" "}
           who want to experiment building social impact products using
