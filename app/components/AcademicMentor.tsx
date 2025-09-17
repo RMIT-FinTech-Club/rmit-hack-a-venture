@@ -3,9 +3,9 @@ import React from "react";
 
 export const AcademicMentor = () => {
   return (
-    <div>
+    <div className="md:px-20">
       <div className="relative z-10">
-        <div className="text-center pt-[4rem] font-sans font-bold text-6xl text-color-gradient drop-shadow-text">
+        <div className="text-center pt-[4rem] font-sans font-bold text-5xl text-color-gradient drop-shadow-text">
           OUR ACADEMIC MENTORS
         </div>
       </div>
@@ -15,7 +15,7 @@ export const AcademicMentor = () => {
           <div className="font-bold text-2xl text-green-color-gradient">
             <span>DR. MINH NGUYEN</span>
           </div>
-          <div className="w-[25vw] h-auto object-cover overflow-hidden rounded-[50px] border-[#91DAAE] border-4">
+          <div className="w-[20vw] h-auto object-cover overflow-hidden rounded-[50px] border-[#91DAAE] border-4">
             <Image
               src="/Mentor-MinhNguyen.png"
               alt="Mentor Minh Nguyen"
@@ -31,7 +31,7 @@ export const AcademicMentor = () => {
             <div className="absolute rounded-lg pl-[10px] pr-[250px] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="90"
+                width="70"
                 height="82"
                 viewBox="0 0 90 82"
                 fill="none"
@@ -78,22 +78,22 @@ export const AcademicMentor = () => {
               </svg>
             </div>
 
-            <div className="rounded-[50px] w-[400px] h-[86px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] mt-6 ">
+            <div className="rounded-[50px] w-[350px] h-[86px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] mt-6 ">
               <div className="relative">
-                <div className=" absolute pl-[310px] pt-4">
+                <div className=" absolute pl-[275px] pt-5">
                   <div className="transition duration-300 transform hover:scale-110 hover:brightness-150 hover:drop-shadow-[0_0_6px_#FFEFCA] border-solid border-[1.95px] border-black rounded-md p-1">
                     <a href="mailto:minh.nguyen244@rmit.edu.vn">
                       <Image
                         src="/outlook.svg"
                         alt="Outlook"
-                        width={45}
-                        height={45}
+                        width={35}
+                        height={35}
                         loading="lazy"
                       />
                     </a>
                   </div>
                 </div>
-                <div className="rounded-lg pl-[100px] pr-[110px] pt-4 text-sm text-center">
+                <div className="rounded-lg px-[80px] pt-4 text-sm text-center">
                   LECTURER OF BLOCKCHAIN ENABLED BUSINESS, RMIT VIETNAM
                 </div>
               </div>
@@ -101,11 +101,12 @@ export const AcademicMentor = () => {
           </div>
         </div>
 
+
         <div className="flex flex-col place-items-center">
           <div className="font-bold text-2xl text-green-color-gradient">
             <span>DR. HOANG PHAN</span>
           </div>
-          <div className="w-[25vw] h-auto object-cover overflow-hidden rounded-[50px] border-[#91DAAE] border-4">
+          <div className="w-[20vw] h-auto object-cover overflow-hidden rounded-[50px] border-[#91DAAE] border-4">
             <Image
               src="/Mentor-HoangPhan.png"
               alt="Mentor Hoang Phan"
@@ -121,7 +122,7 @@ export const AcademicMentor = () => {
             <div className="absolute rounded-lg pl-[10px] pr-[250px] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="90"
+                width="70"
                 height="82"
                 viewBox="0 0 90 82"
                 fill="none"
@@ -168,9 +169,9 @@ export const AcademicMentor = () => {
               </svg>
             </div>
 
-            <div className=" rounded-[50px] w-[400px] h-[86px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] mt-6 ">
+            <div className=" rounded-[50px] w-[350px] h-[86px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] mt-6 ">
               <div className="relative">
-                <div className=" absolute rounded-lg pl-[300px] pr-2 pt-1">
+                <div className=" absolute rounded-lg pl-[270px] pr-2 pt-3">
                   <div className="transition duration-300 transform hover:scale-110 hover:brightness-150 hover:drop-shadow-[0_0_6px_#FFEFCA]">
                     <a
                       href="https://www.linkedin.com/in/hoang-phan-20a24b45/"
@@ -178,8 +179,8 @@ export const AcademicMentor = () => {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="77"
-                        height="77"
+                        width="65"
+                        height="65"
                         viewBox="0 0 77 77"
                         fill="none"
                       >
@@ -222,7 +223,7 @@ export const AcademicMentor = () => {
                     </a>
                   </div>
                 </div>
-                <div className="rounded-lg pl-[100px] pr-[110px] pt-4 text-sm  text-center">
+                <div className="rounded-lg px-[80px] pt-4 text-sm  text-center">
                   LECTURER OF STEM FOR SUSTAINABLE DEVELOPMENT, RMIT VIETNAM
                 </div>
               </div>
@@ -234,7 +235,7 @@ export const AcademicMentor = () => {
           <div className="font-bold text-2xl text-green-color-gradient">
             <span>DR. TRI DANG</span>
           </div>
-          <div className="w-[25vw] h-auto object-cover overflow-hidden rounded-[50px] border-[#91DAAE] border-4">
+          <div className="w-[20vw] h-auto object-cover overflow-hidden rounded-[50px] border-[#91DAAE] border-4">
             <Image
               src="/Mentor-TriDang.png"
               alt="Mentor Tri Dang"
@@ -250,7 +251,7 @@ export const AcademicMentor = () => {
             <div className="absolute rounded-lg pl-[10px] pr-[250px] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="90"
+                width="70"
                 height="82"
                 viewBox="0 0 90 82"
                 fill="none"
@@ -297,9 +298,9 @@ export const AcademicMentor = () => {
               </svg>
             </div>
 
-            <div className=" rounded-[50px] w-[400px] h-[86px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] mt-6 ">
+            <div className=" rounded-[50px] w-[350px] h-[86px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] mt-6 ">
               <div className="relative">
-                <div className=" absolute rounded-lg pl-[300px] pr-2 pt-1">
+                <div className=" absolute rounded-lg pl-[270px] pr-2 pt-2">
                   <div className="transition duration-300 transform hover:scale-110 hover:brightness-150 hover:drop-shadow-[0_0_6px_#FFEFCA]">
                     <a
                       href="https://www.linkedin.com/in/tri-dang-489383b/"
@@ -307,8 +308,8 @@ export const AcademicMentor = () => {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="77"
-                        height="77"
+                        width="70"
+                        height="70"
                         viewBox="0 0 77 77"
                         fill="none"
                       >
@@ -351,7 +352,7 @@ export const AcademicMentor = () => {
                     </a>
                   </div>
                 </div>
-                <div className="rounded-lg pl-[100px] pr-[110px] pt-4 text-sm text-center">
+                <div className="rounded-lg px-[80px] pt-4 text-sm text-center">
                   ACTING ASSOCIATE PROGRAM MANAGER, IT&SE, RMIT VIETNAM
                 </div>
               </div>

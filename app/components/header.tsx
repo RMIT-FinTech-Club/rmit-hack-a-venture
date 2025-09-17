@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion"
-import '../css/Header.css'
 
 export const Header = () => {
 	return (
@@ -22,7 +21,7 @@ const LaptopNav = () => {
 		>
 			{/*-----------------------------left side ------------------------*/}
 			<div className="h-[100%] w-[650px] flex justify-between items-center">
-				<a className="no-underline block" href="#">
+				<a className="no-underline block" href="/">
 					<img
 						className="w-[60px] h-[60px]"
 						src="/alignVerticalLogo.svg"
@@ -121,7 +120,7 @@ const MobileNav = () => {
 				ref={containerRef}
 				className=" max-md:px-[20px] w-full h-[72px] backdrop-blur-sm bg-black/30 border-b-[1px] border-solid border-[#374051] flex justify-between items-center">
 				{/*---------- mobile logo ----------*/}
-				<a className="no-underline block" href="#header">
+				<a className="no-underline block" href="/">
 					<img className="h-[40px]" src="/alignHorizontalLogo.svg" alt="mobile logo" />
 				</a>
 
@@ -225,15 +224,9 @@ const Navigation = ({ hamburgerBarIsActive }: { hamburgerBarIsActive: boolean })
 					whileTap={{ scale: 0.95 }}
 				>
 					<a
-						href="https://docs.google.com/document/d/1O8YfpM47p9qRoE-2Vimq77p2ZAeLQ1-ynD67aE7Ys2Q/edit"
+						href=""
 						target="_blank"
 						className={`hover:text-white text-[#9CA3AF] font-normal cursor-pointer`}
-					// style={{
-					// 	textShadow:
-					// 		hoverItemNumber == 2 ? "1px 1px 5px rgba(201, 63, 221, 1)" : "",
-					// }}
-					// onMouseEnter={() => setHoverItemNumber(2)}
-					// onMouseLeave={() => setHoverItemNumber(-1)}
 					>
 						<h1>Rules & Regulations</h1>
 					</a>
@@ -257,8 +250,8 @@ const Navigation = ({ hamburgerBarIsActive }: { hamburgerBarIsActive: boolean })
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.95 }}
 				>
-					<a href="https://docs.google.com/document/d/1FGA7Ds3eAuEGMV6rF1yvot5bwMmflQaoPDTHylie4JA/edit" target="_blank" className="no-underline font-semibold  text-[#C93FDD] block cursor-pointer">
-						See Handbook
+					<a href="" target="_blank" className="no-underline font-semibold  text-color-gradient block cursor-pointer">
+						See Public Handbook
 					</a>
 				</motion.li>
 
@@ -267,7 +260,7 @@ const Navigation = ({ hamburgerBarIsActive }: { hamburgerBarIsActive: boolean })
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.95 }}
 				>
-					<a href="mailto:rmithackaventure0108@gmail.com" className="no-underline font-semibold  text-[#C93FDD] block cursor-pointer">
+					<a href="mailto:rmithackaventure0108@gmail.com" className="no-underline font-semibold  text-color-gradient block cursor-pointer">
 						Contact Us
 					</a>
 				</motion.li>
@@ -277,8 +270,8 @@ const Navigation = ({ hamburgerBarIsActive }: { hamburgerBarIsActive: boolean })
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.95 }}
 				>
-					<button className="px-[24px] py-[8px] rounded-2xl bg-[#B25FD6] hover:bg-[#CA8CE6] text-white font-semibold">
-						<a href="https://docs.google.com/forms/d/1azQmLTEt04oDg3TwJyTmQ-wbzgxiPLibbaQdSiTHtVU/viewform?edit_requested=true" target="_blank">Join Now</a>
+					<button className="px-[24px] py-[8px] rounded-2xl bg-gradient-to-b from-[#F37D12] to-[#FDE309] text-white font-semibold">
+						<a href="" target="_blank">Join Now</a>
 					</button>
 				</motion.li>
 

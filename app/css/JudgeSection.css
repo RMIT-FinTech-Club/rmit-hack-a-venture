@@ -24,7 +24,7 @@
 
 /* Active dot styling */
 .slick-dots li.slick-active button:before {
-	color: #c93fdd; /* Color for active dot */
+	color: #F37D12; /* Color for active dot */
 	opacity: 1;
 }
 

@@ -5,12 +5,12 @@ import { useInView } from "react-intersection-observer";
 
 export const WorkshopTimeline = () => {
   return (
-    <section className="w-full flex flex-col items-center max-md:px-[16px] max-md:mt-[40px] overflow-x:hidden">
+    <section className="w-full flex flex-col items-center md:px-12 max-md:px-[16px] max-md:mt-[40px] overflow-x:hidden">
       <div className="drop-shadow-container">
         <h1
-          className={`max-md:text-4xl md:text-6xl text-center text-white font-semibold md:px-[40px] drop-shadow-text`}
+          className={`max-md:text-4xl md:text-6xl text-center text-white font-semibold drop-shadow-text`}
         >
-          Hack-A-Venture Timeline
+          Hack-A-Venture <span className="text-color-gradient">Timeline</span>
         </h1>
       </div>
       <RoundFormatTimeline />
@@ -73,7 +73,7 @@ const TrainingWorkshopTimeline = () => {
   return (
     <section className="w-[100%] flex flex-col items-center md:mt-[60px]">
       <RoundedTimelineHeader text="TRAINING WORKSHOPS" />
-      <p className=" hidden lg:inline-block text-[18px] mt-[30px] mb-[40px] text-[#9CA3AF]">
+      <p className=" hidden lg:inline-block text-xl font-medium mt-[30px] mb-[40px] text-[#91DAAE]">
         To support participants, Hack-A-Venture 2025 will provide a series of
         workshops
       </p>
@@ -268,15 +268,7 @@ const TimelineRange: React.FC<{
 }> = ({ numberOfOrder, timeRangeText }) => {
   return (
     <h3
-      className={` flex-shrink-0 w-[220px] text-center text-[16px] lg:text-[18px] font-semibold ${
-        numberOfOrder == 1
-          ? "text-[#91DAAE]"
-          : numberOfOrder == 2
-          ? "text-[#91DAAE]"
-          : numberOfOrder == 3
-          ? "text-[#91DAAE]"
-          : numberOfOrder == 4 && "text-[#91DAAE]"
-      }`}
+      className={` flex-shrink-0 w-fit p-2 rounded-lg bg-gradient-to-b from-[#01985C] to-[#2DC6D2] text-center text-[16px] lg:text-[18px] font-semibold text-[#000000]`}
     >
       {timeRangeText}
     </h3>
@@ -294,12 +286,12 @@ const VerticalLine: React.FC<{ numberOfOrder: number; rounded: boolean }> = ({
       style={{
         background: `linear-gradient(to bottom, ${
           numberOfOrder == 1
-            ? "#002840"
+            ? "#01985C"
             : numberOfOrder == 2
-            ? "#023233"
+            ? "#93BC4A"
             : numberOfOrder == 3
-            ? "#012417"
-            : numberOfOrder == 4 && "#012417"
+            ? "#C1CF3E"
+            : numberOfOrder == 4 && "#84B74F"
         }, transparent`,
       }}
     />
@@ -346,21 +338,21 @@ const TextSection: React.FC<{
       }`}
     >
       <h1
-        className={`text-color-gradient lg:text-[28px] text-[24px] font-bold ${
+        className={`text-color-gradient text-2xl font-bold ${
           headLine == "" && "hidden"
         }`}
       >
         {headLine}
       </h1>
       <h2
-        className={`text-green-color-gradient lg:text-[22px] text-[20px] font-semibold ${
+        className={`text-green-color-gradient text-xl font-semibold ${
           subHeadline == "" && "hidden"
         }`}
       >
         {subHeadline}
       </h2>
       <p
-        className={`text-white lg:text[24px] text-[18px] font-normal ${
+        className={`text-white text-lg font-medium ${
           paragraph == "" && "hidden"
         }`}
       >

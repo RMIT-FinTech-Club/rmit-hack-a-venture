@@ -11,7 +11,7 @@ const themeData = [
     iconSrc: "/green-footprint.png",
     alt: "green",
     text: "Open Innovation for a Green Vietnam",
-    imageSrc: "/GreenVietnam.png",
+    imageSrc: "/ThemeGreen.png",
   },
   {
     id: "1",
@@ -19,7 +19,7 @@ const themeData = [
     iconSrc: "/smart_toy.png",
     alt: "AI",
     text: "Artificial Intelligence (AI)",
-    imageSrc: "/AI.png",
+    imageSrc: "/ArtificialIntelligence.png",
   },
   {
     id: "2",
@@ -27,7 +27,7 @@ const themeData = [
     iconSrc: "/currency_bitcoin.png",
     alt: "bitcoin",
     text: "Blockchain Technology",
-    imageSrc: "/Blockchain.png",
+    imageSrc: "/BlockchainTechnology.png",
   },
   {
     id: "3",
@@ -35,7 +35,7 @@ const themeData = [
     iconSrc: "/encrypted.png",
     alt: "encrypted",
     text: "Cybersecurity Technology",
-    imageSrc: "/Cybersecurity.png",
+    imageSrc: "/CybersecurityTechnology.png",
   },
 ];
 
@@ -93,7 +93,7 @@ export const ThemeSection = () => {
   const selectedItem = themeData.find((item) => item.id === selectedId);
 
   return (
-    <div className="md:px-[10vw] md:py-[20px] w-full max-md:px-[16px] max-md:pt-[40px]">
+    <div className="md:px-20 md:pb-[20px] w-full max-md:px-[16px] max-md:pt-[40px]">
       <div className="md:grid md:grid-cols-10 w-full md:pt-[80px]">
         <div className="md:col-span-5 w-full h-full">
           <div className="drop-shadow-container">
@@ -113,7 +113,7 @@ export const ThemeSection = () => {
               Our Tech Focus
             </h1>
           </div>
-          <h3 className="md:mt-[24px] md:max-w-[40vw] font-sans text-white max-md:mt-[16px]">
+          <h3 className="md:mt-4 font-sans text-lg text-white max-md:mt-[16px]">
             Participants are required to leverage one of the following
             technologies or more:
           </h3>
@@ -132,7 +132,7 @@ export const ThemeSection = () => {
           </div>
         </div>
 
-        <div className="md:col-span-5 object-cover max-md:hidden md:w-[32vw] mx-auto">
+        <div className="md:col-span-5 object-cover max-md:hidden md:w-[35vw] ml-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedItem?.id || "default"}
@@ -142,8 +142,8 @@ export const ThemeSection = () => {
               transition={{ duration: 0.5 }}
             >
               <Image
-                className="justify-self-end object-cover rounded-[2rem]"
-                src={selectedItem?.imageSrc || "/GreenVietnam.png"}
+                className="object-cover rounded-[2rem]"
+                src={selectedItem?.imageSrc || "/ThemeGreen.png"}
                 alt={selectedItem?.alt || "theme"}
                 width={1000}
                 height={1000}
@@ -153,7 +153,7 @@ export const ThemeSection = () => {
         </div>
       </div>
       <div className="md:mt-[50px] md:py-[20px] max-md:mt-[32px]">
-        <span className="text-white text-xl font-normal font-sans">
+        <span className="text-white text-xl text-justify font-medium font-sans">
           These technologies will be used to develop innovative solutions to
           address social challenges within Vietnam. The specific social issues
           related to{" "}

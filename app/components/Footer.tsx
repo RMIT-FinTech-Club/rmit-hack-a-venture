@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <footer className="pt-[2px] bg-gradient-to-r from-[#F37D12] to-[#FDE309] gap-[50px] mt-[50px] ">
       <div className="bg-[#000000] py-[25px] px-[50px] flex flex-col justify-center items-center">
-        <section className="w-full flex flex-col gap-[50px] lg:flex-row md:justify-between">
+        <section className="w-full flex flex-col gap-[50px] md:flex-row md:justify-between">
           <SocialMediaList />
           <OrganizerList />
           <ContactList />
