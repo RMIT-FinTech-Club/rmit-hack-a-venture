@@ -114,8 +114,7 @@ export const ThemeSection = () => {
             </h1>
           </div>
           <h3 className="md:mt-4 font-sans text-lg text-white font-medium max-md:mt-[16px]">
-            Participants are required to leverage one of the following
-            technologies or more:
+            Participants are encouraged to explore and leverage any technology of their choice, including but not limited to:
           </h3>
 
           <div className="grid grid-rows-3 md:mt-[25px] md:gap-[20px] max-md:mt-[25px] max-md:gap-[10px]">
@@ -152,7 +151,7 @@ export const ThemeSection = () => {
           </AnimatePresence>
         </div>
       </div>
-      <div className="md:mt-[50px] md:py-[20px] max-md:mt-[32px]">
+      <div className="md:py-[20px] mt-[30px]">
         <span className="text-white text-lg text-justify md:text-xl font-medium font-sans">
           These technologies will be used to develop innovative solutions to
           address social challenges within Vietnam. The specific social issues

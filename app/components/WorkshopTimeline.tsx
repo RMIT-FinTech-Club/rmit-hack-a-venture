@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 export const WorkshopTimeline = () => {
   return (
-    <section className="w-full flex flex-col items-center md:px-12 max-md:px-10 max-md:mt-[40px] overflow-x:hidden">
+    <section className="w-full flex flex-col items-center md:px-12 max-md:px-10 max-md:mt-[40px] md:mt-[20px] overflow-x:hidden">
       <div className="drop-shadow-container">
         <h1
           className={`max-md:text-4xl md:text-6xl text-center text-white font-semibold drop-shadow-text`}
@@ -30,7 +30,7 @@ const RoundFormatTimeline = () => {
         }
       `}</style>
       <RoundedTimelineHeader text="ROUND FORMAT" />
-      <p className="text-white text-[24px] font-bold mt-[70px] mb-[10px] max-md:hidden">
+      <p className="text-white text-[24px] font-bold mt-[30px] mb-[10px] max-md:hidden">
         Round
       </p>
       <DetailTimeLine
@@ -41,7 +41,7 @@ const RoundFormatTimeline = () => {
         dashLineColor="#000000 0%, #0EA2FF 47%, #000000 100%"
         headline="IDEA PROPOSAL"
         subHeadline="Empathize, define, ideate!"
-        paragraph="Participants are to submit an idea proposal/whitepaper, outlining SDG-related problems they want to address in Vietnam that can leverage either AI, Blockchain, or Cybersecurity. SDGs & Whitepaper structure will be released to participants at start of Round 01."
+        paragraph="Teams are expected to submit a written proposal for a product/solution leveraging technologies such as AI, Blockchain, Cybersecurity, etc. to solve a specific SDG-related problem in Vietnam. The proposal must explain the chosen problem, how the technology is applied, and the solution's potential impact. Teams must choose their SDG from a pre-selected list provided by the Organizing Committee at the start of Round 01."
       />
 
       <DetailTimeLine
@@ -49,10 +49,10 @@ const RoundFormatTimeline = () => {
         numberOfOrder={2}
         rightSideOfTextSection={false}
         timeRangeText="Dec 4 – Dec 17, 2025"
-        headline="IDEA DOCUMENTATION"
+        headline="DOCUMENTATION"
         dashLineColor="#000000 0%, #10D8D8 47%, #000000 100%"
         subHeadline="Specify & materialize ideas!"
-        paragraph="Teams are to provide a slide presentation, and video presentation containing a Business Documentation and Technology Documentation. These documents detail specifically how their idea work Business-wise and Technology-wise, using specific frameworks."
+        paragraph="Teams are required to submit detailed Business and Technology Documentation developed using specific frameworks released in Round 2, covering aspects like business strategies and system architectures. Both documents will be weighted equally and must be submitted along with a Slide Presentation video."
       />
 
       <DetailTimeLine
@@ -63,7 +63,7 @@ const RoundFormatTimeline = () => {
         headline="HACKDAY & PITCHING"
         subHeadline="Prototype & Presentation"
         dashLineColor="#000000 0%, #22E29A 47%, #000000 100%"
-        paragraph="Teams are to create a Prototype with their unique technical features. Teams have to also meet additional Technical Requirements and Business Requirements. Teams can consult with mentors online or on HackDay 01. On HackDay 02, teams pitch to determine the ultimate champion and runner-up prizes!"
+        paragraph="Teams must develop a minimum viable product (MVP) or prototype with core functionalities. On HackDay 1, you'll receive additional requirements to further develop your prototype and business plan. You'll then have 24 hours to complete these tasks before a final demo pitch on HackDay 2, with live mentoring from industry experts available to support you."
       />
     </section>
   );
@@ -128,7 +128,7 @@ const TrainingWorkshopTimeline = () => {
 
 const RoundedTimelineHeader: React.FC<{ text: string }> = ({ text }) => {
   return (
-    <div className="text-white text-[20px] lg:text-[24px] font-semibold py-2 px-6 rounded-full text-2xl shadow-md max-md:mt-[24px] md:mt-[70px] bg-gradient-to-b from-[#F37D12] to-[#FDE309]">
+    <div className="text-white text-[20px] lg:text-[24px] font-semibold py-2 px-6 rounded-full text-2xl shadow-md max-md:mt-[24px] md:mt-[30px] bg-gradient-to-b from-[#F37D12] to-[#FDE309]">
       {text}
     </div>
   );
@@ -179,7 +179,7 @@ const DetailTimeLine: React.FC<{
   return (
     <>
       {/*----------- laptop version ---------*/}
-      <section className="relative w-[80%] lg:pb-[300px] lg:block hidden">
+      <section className="relative w-[80%] lg:pb-[500px] lg:block hidden">
         {/*--------- milestone round number and timeline -------*/}
         <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-[30px]">
           <MilestoneRound rounded={rounded} numberOfOrder={numberOfOrder} />
@@ -281,7 +281,7 @@ const VerticalLine: React.FC<{ numberOfOrder: number; rounded: boolean }> = ({
   return (
     <div
       className={`absolute ${rounded ? "top-[98px]" : "top-[68px]"} w-0.5 ${
-        rounded ? "h-[290px]" : "h-[350px]"
+        rounded ? "h-[450px]" : "h-[350px]"
       } mx-auto -z-10`}
       style={{
         background: `linear-gradient(to bottom, ${

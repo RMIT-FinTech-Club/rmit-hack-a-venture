@@ -21,7 +21,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AboutUsSection />
-      <Countdown date={"2025-12-11"} />
+      <Countdown date={"2025-11-02"} />
       {/* <PartnerSection /> */}
       <AboutClub />
       <WhoSection />

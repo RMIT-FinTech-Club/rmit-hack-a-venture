@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 import "../css/HeroSection.css";
 import { motion } from "framer-motion";
-import Button from "./Button";
 
 const DURATION = 0.15;
 const STAGGER = 0.015;
@@ -67,15 +66,15 @@ export const HeroSection = () => {
             </motion.h1>
 
             <div className="mt-[40px] flex justify-start gap-4">
-              <button className="w-[15vw] h-[48px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] rounded-[12px] justify-items-center flex justify-center items-center text-white font-semibold font-poppins">
-                <a href="" target="_blank" className="no-underline">
-                  See Public Handbook
+              <button className="w-[12vw] h-[48px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] rounded-[12px] justify-items-center flex justify-center items-center text-white font-semibold font-poppins">
+                <a href="https://bit.ly/RMITHack-A-Venture2025Handbook" target="_blank" className="no-underline">
+                  See Handbook
                 </a>
               </button>
 
-              <button className="w-[15vw] h-[48px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] rounded-[12px] justify-items-center flex justify-center items-center text-white font-semibold font-poppins">
+              <button className="w-[12vw] h-[48px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] rounded-[12px] justify-items-center flex justify-center items-center text-white font-semibold font-poppins">
                 {/* <Button /> */}
-                <a href="" target="_blank">
+                <a href="https://forms.gle/RCp2kr5zheyp2Gq2A" target="_blank">
                   Join Now
                 </a>
                 <Image
@@ -167,10 +166,10 @@ export const HeroSection = () => {
           solve Vietnam's pressing social challenge!
         </div>
 
-        <div className="flex flex-col w-full gap-5 justify-center items-center px-[16px]">
+        <div className="flex w-full gap-5 justify-center items-center px-[16px]">
           <button className="w-full h-[48px] bg-gradient-to-b from-[#F37D12] to-[#FDE309] rounded-[12px] justify-items-center flex justify-center items-center text-white font-semibold font-poppins">
             <a href="" target="_blank" className="no-underline">
-              See Public Handbook
+              See Handbook
             </a>
           </button>
 

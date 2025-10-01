@@ -17,15 +17,15 @@ const LaptopNav = () => {
 	return (
 		<nav
 			id="header"
-			className="px-[10vw] sticky z-50 top-0 w-full h-[72px] backdrop-blur-sm bg-black/30 border-b-[1px] border-solid border-[#374051] text-[14px] hidden lg:flex justify-between items-center gap-[100px]"
+			className="px-12 sticky z-50 top-0 w-full h-[72px] backdrop-blur-sm bg-black/30 border-b-[1px] border-solid border-[#374051] text-[14px] hidden lg:flex justify-between items-center gap-[100px]"
 		>
 			{/*-----------------------------left side ------------------------*/}
 			<div className="h-[100%] w-[650px] flex justify-between items-center">
 				<a className="no-underline block" href="/">
 					<img
-						className="w-[60px] h-[60px]"
-						src="/alignVerticalLogo.svg"
-						alt="laptop logo"
+						className="w-auto h-[5rem]"
+						src="/hackaventure-logo.png"
+						alt="Laptop logo"
 					/>
 				</a>
 				<a
@@ -41,7 +41,7 @@ const LaptopNav = () => {
 					<h1>About Hack-A-Venture</h1>
 				</a>
 				<a
-					href=""
+					href="https://bit.ly/RMITHack-A-Venture2025RulesandRegulations"
 					target="_blank"
 					className={`hover:text-white text-[#9CA3AF] font-normal  cursor-pointer`}
 					style={{
@@ -68,13 +68,13 @@ const LaptopNav = () => {
 			</div>
 
 			{/*-----------------------------right side ------------------------*/}
-			<div className="h-full w-[400px] flex justify-between items-center">
-				<a href="" target="_blank" className="no-underline font-semibold text-color-gradient">
-					See Public Handbook
+			<div className="h-full w-[400px] flex justify-start items-center gap-12">
+				<a href="https://bit.ly/RMITHack-A-Venture2025Handbook" target="_blank" className="no-underline font-semibold text-color-gradient">
+					See Handbook
 				</a>
 				<a href="mailto:rmithackaventure0108@gmail.com" className="no-underline font-semibold  text-color-gradient">Contact Us</a>
 				<button className="px-[15px] py-[5px] rounded-2xl bg-gradient-to-b from-[#F37D12] to-[#FDE309] text-white font-semibold">
-					<a href="" target="_blank">Join Now</a>
+					<a href="https://forms.gle/RCp2kr5zheyp2Gq2A" target="_blank">Join Now</a>
 				</button>
 			</div>
 		</nav>
@@ -112,16 +112,16 @@ const MobileNav = () => {
 
 
 	return (
-		<section className="lg:hidden flex justify-between items-center  sticky top-0 z-50">
+		<section className="lg:hidden flex justify-between items-center sticky top-0 z-50">
 			<motion.nav
 				initial={false}
 				animate={hamburgerBarIsActive ? "open" : "closed"}
 				custom={height}
 				ref={containerRef}
-				className=" max-md:px-[20px] w-full h-[72px] backdrop-blur-sm bg-black/30 border-b-[1px] border-solid border-[#374051] flex justify-between items-center">
+				className="w-full h-[72px] backdrop-blur-sm bg-black/30 border-b-[1px] border-solid border-[#374051] flex justify-between items-center mr-10">
 				{/*---------- mobile logo ----------*/}
 				<a className="no-underline block" href="/">
-					<img className="h-[40px]" src="/alignHorizontalLogo.svg" alt="mobile logo" />
+					<img className="h-[6rem]" src="/hackaventure-logo.png" alt="Mobile logo" />
 				</a>
 
 				{/*---------- hamburger bar --------*/}
@@ -224,7 +224,7 @@ const Navigation = ({ hamburgerBarIsActive }: { hamburgerBarIsActive: boolean })
 					whileTap={{ scale: 0.95 }}
 				>
 					<a
-						href=""
+						href="https://bit.ly/RMITHack-A-Venture2025RulesandRegulations"
 						target="_blank"
 						className={`hover:text-white text-[#9CA3AF] font-normal cursor-pointer`}
 					>
@@ -250,8 +250,8 @@ const Navigation = ({ hamburgerBarIsActive }: { hamburgerBarIsActive: boolean })
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.95 }}
 				>
-					<a href="" target="_blank" className="no-underline font-semibold  text-color-gradient block cursor-pointer">
-						See Public Handbook
+					<a href="https://bit.ly/RMITHack-A-Venture2025Handbook" target="_blank" className="no-underline font-semibold  text-color-gradient block cursor-pointer">
+						See Handbook
 					</a>
 				</motion.li>
 
@@ -271,7 +271,7 @@ const Navigation = ({ hamburgerBarIsActive }: { hamburgerBarIsActive: boolean })
 					whileTap={{ scale: 0.95 }}
 				>
 					<button className="px-[24px] py-[8px] rounded-2xl bg-gradient-to-b from-[#F37D12] to-[#FDE309] text-white font-semibold">
-						<a href="" target="_blank">Join Now</a>
+						<a href="https://forms.gle/RCp2kr5zheyp2Gq2A" target="_blank">Join Now</a>
 					</button>
 				</motion.li>
 
