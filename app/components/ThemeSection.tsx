@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
-import "../css/ThemeSection.css";
+import React, { useState, useEffect } from "react"; // 1. Import useEffect
 import { motion, AnimatePresence } from "framer-motion";
 
 const themeData = [
@@ -39,7 +38,6 @@ const themeData = [
   },
 ];
 
-// Reusable component for list items
 type ThemeItemProps = {
   item: {
     id: string;
@@ -74,11 +72,11 @@ const ThemeItem: React.FC<ThemeItemProps> = ({
     >
       <div
         className={`text-[1.5rem] font-semibold font-sans ${
-          selectedId === item.id 
-            ? item.id === "0" 
-              ? "text-[#91DAAE]" 
-              : "text-color-gradient" 
-            : "text-white" 
+          selectedId === item.id
+            ? item.id === "0"
+              ? "text-[#91DAAE]"
+              : "text-color-gradient"
+            : "text-white"
         }`}
       >
         {item.text}
@@ -89,6 +87,19 @@ const ThemeItem: React.FC<ThemeItemProps> = ({
 
 export const ThemeSection = () => {
   const [selectedId, setSelectedId] = useState("0");
+
+  // Add useEffect to automate the animation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedId((prevId) => {
+        const nextId = (parseInt(prevId, 10) + 1) % themeData.length;
+        return nextId.toString();
+      });
+    }, 5000); // Change item every 3 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   const selectedItem = themeData.find((item) => item.id === selectedId);
 
@@ -114,7 +125,8 @@ export const ThemeSection = () => {
             </h1>
           </div>
           <h3 className="md:mt-4 font-sans text-lg text-white font-medium max-md:mt-[16px]">
-            Participants are encouraged to explore and leverage any technology of their choice, including but not limited to:
+            Participants are encouraged to explore and leverage any technology
+            of their choice, including but not limited to:
           </h3>
 
           <div className="grid grid-rows-3 md:mt-[25px] md:gap-[20px] max-md:mt-[25px] max-md:gap-[10px]">
@@ -131,7 +143,7 @@ export const ThemeSection = () => {
           </div>
         </div>
 
-        <div className="md:col-span-5 object-cover max-md:hidden md:w-[35vw] ml-auto">
+        <div className="md:col-span-5 object-cover max-md:hidden md:w-[28rem] ml-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedItem?.id || "default"}
@@ -156,7 +168,7 @@ export const ThemeSection = () => {
           These technologies will be used to develop innovative solutions to
           address social challenges within Vietnam. The specific social issues
           related to{" "}
-          <span className="text-color-gradient">
+          <span className="font-bold text-color-gradient">
             Sustainable Development Goals (SDGs)
           </span>{" "}
           will be revealed at the start of Round 1. Teams will be challenged to

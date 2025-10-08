@@ -15,17 +15,17 @@ export const AboutUsSection = () => {
         This competition aims to bridge the gap between technical expertise and
         business strategy by having students leverage cutting-edge technologies
         such as{" "}
-        <span className="inline-block text-color-gradient">
+        <span className="text-color-gradient">
           AI, Blockchain, Cybersecurity, etc.
         </span>{" "}
         to develop innovative products that address challenges related to the
         United Nations Sustainable Development Goals (SDGs) in Vietnam. Beyond
         product development, teams are required to create{" "}
-        <span className="inline-block text-color-gradient">
+        <span className="text-color-gradient">
           a comprehensive business plan
         </span>{" "}
         that ensures the{" "}
-        <span className="inline-block text-color-gradient">
+        <span className="text-color-gradient">
           viability, sustainability, and scalability
         </span>{" "}
         of their solution.

@@ -22,15 +22,15 @@ export default function Home() {
       <HeroSection />
       <AboutUsSection />
       <Countdown date={"2025-11-02"} />
-      {/* <PartnerSection /> */}
+      <PartnerSection />
       <AboutClub />
       <WhoSection />
       <ThemeSection />
       <WorkshopTimeline />
       <PrizeSection />
-      {/* <SponsoredPrizeSection /> */}
-      {/* <JudgeSection /> */}
-      {/* <MentorSection /> */}
+      <SponsoredPrizeSection />
+      <JudgeSection />
+      <MentorSection />
       <AcademicMentor />
       <BackToTopButton />
       <Footer />

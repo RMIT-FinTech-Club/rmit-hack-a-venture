@@ -56,7 +56,7 @@ export const PrizeSection = () => {
   return (
     <div
       ref={ref}
-      className="text-white flex flex-col md:mt-[120px] max-md:px-10 max-md:mt-[20px] text-center"
+      className="text-white flex flex-col md:mt-[60px] max-md:px-10 max-md:mt-[20px] text-center"
     >
       {/* --- HEADING SECTION --- */}
       <motion.div
@@ -68,16 +68,16 @@ export const PrizeSection = () => {
         <span className="max-md:text-3xl md:text-6xl text-center text-white font-semibold md:px-[40px] drop-shadow-text">
           Hack-A-Venture <span className="text-color-gradient">Prizes</span>
         </span>
-        <p className="md:mt-[24px] text-lg md:text-xl font-medium font-sans text-white max-md:mt-[10px]">
+        {/* <p className="md:mt-[24px] text-lg md:text-xl font-medium font-sans text-white max-md:mt-[10px]">
           Prize components will include{" "}
           <span className="text-color-gradient">GotIt Vouchers</span>,{" "}
           <span className="text-color-gradient">Course Scholarships</span> and{" "}
           <span className="text-color-gradient">Medals</span>
-        </p>
+        </p> */}
       </motion.div>
 
       {/* --- PRIZES CONTAINER --- */}
-      <div className="flex flex-row md:gap-12 text-[#FBF6FD] justify-between items-center md:mt-[80px] md:px-20 max-md:mt-[24px] w-full">
+      <div className="flex flex-row md:gap-12 text-[#FBF6FD] justify-between items-center md:mt-[25px] md:px-20 max-md:mt-[24px] w-full">
         
         {prizeData
           .sort((a, b) => a.desktopOrder - b.desktopOrder) // Sort for desktop order
@@ -95,8 +95,8 @@ export const PrizeSection = () => {
                 alt={prize.alt}
                 className={`${
                   prize.isChampion
-                    ? "md:w-[270px] w-[150px]"
-                    : "md:w-[200px] w-[120px]"
+                    ? "md:w-[230px] w-[110px]"
+                    : "md:w-[160px] w-[80px]"
                 } h-auto rounded-xl mb-4 object-cover mx-auto`}
                 width={270}
                 height={270}
@@ -118,49 +118,3 @@ export const PrizeSection = () => {
     </div>
   );
 };
-
-
-{/* <motion.div
-				animate={controls}
-				initial="hidden"
-				variants={variants}
-				transition={{ duration: 1.3, delay: 1.5 }}
-			>
-				<Image src="/Rectangle.png" alt="light" className="light-effect" width={726.1} height={68.34} />
-			</motion.div> */}
-
-      {/* <motion.div
-				animate={controls}
-				initial="hidden"
-				variants={variants}
-				transition={{ duration: 1.3, delay: 1.8 }}
-				className='w-full md:px-[10vw]'
-			>
-				<h1 className="mt-[100px] max-md:text-4xl md:text-6xl text-center text-white font-semibold md:px-[40px] max-md:mt-[60px] drop-shadow-text">Special Category Awards</h1>
-				<p className='md:mt-[24px] text-xl font-sans text-white max-md:mt-[16px]'>
-					Prize components will include <span className='font-bold text-[#C93FDD]'>Course Scholarships</span> and <span className='font-bold text-[#C93FDD]'>Vouchers</span>
-				</p>
-				<div className='md:grid md:grid-cols-3 text-[#FBF6FD] max-md:grid max-md:grid-cols-1 md:mx-auto justify-center items-start max-md:gap-[12px] md:mt-[80px] max-md:w-full max-md:mt-[24px]'>
-					<div className="text-center md:col-span-1 max-md:col-span-2">
-						<Image src="/award1.png" alt="2nd Prize" className="md:w-[200px] h-[309px] max-md:scale-75 rounded-xl mb-4 object-cover mx-auto items-start" width={200} height={200} />
-						<div className='drop-shadow-container'>
-							<h3 className="md:text-2xl max-md:text-1xl font-semibold mb-2 drop-shadow-text">Most Technically <br /> Advanced Project</h3>
-						</div>
-					</div>
-
-					<div className="text-center md:col-span-1">
-						<Image src="/award2.png" alt="2nd Prize" className="md:w-[200px] h-[309px] max-md:scale-75 rounded-xl mb-4 object-cover mx-auto items-start" width={200} height={200} />
-						<div className='drop-shadow-container'>
-							<h3 className="md:text-2xl max-md:text-1xl font-semibold mb-2 drop-shadow-text">Most Market <br /> Potential Project</h3>
-						</div>
-					</div>
-
-					<div className="text-center md:col-span-1">
-						<Image src="/award3.png" alt="2nd Prize" className="md:w-[200px] h-[309px] max-md:scale-75 rounded-xl mb-4 object-cover mx-auto items-start " width={200} height={200} />
-						<div className='drop-shadow-container'>
-							<h3 className="md:text-2xl max-md:text-1xl font-semibold mb-2 drop-shadow-text">People Choice Award</h3>
-						</div>
-					</div>
-
-				</div>
-			</motion.div> */}

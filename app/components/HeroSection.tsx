@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import "../css/HeroSection.css";
 import { motion } from "framer-motion";
 
 const DURATION = 0.15;
@@ -51,13 +50,13 @@ export const HeroSection = () => {
               transition={{ delay: 0.5, duration: 0.5 }}
             >
               <div className="w-[420px] lg:w-[490px] text-white text-xl font-medium font-sans text-justify">
-                Organized by RMIT Vietnam FinTech Club, <span className="text-color-gradient">Hack-A-Venture</span> is a
+                Organized by RMIT Vietnam FinTech Club, <span className="font-bold text-color-gradient">Hack-A-Venture</span> is a
                 hackathon-style innovation competition for{" "}
-                <span className="font-bold text-color-gradient inline-block">
+                <span className="font-bold text-color-gradient">
                   Business
                 </span>{" "}
                 and{" "}
-                <span className="font-bold text-color-gradient inline-block">
+                <span className="font-bold text-color-gradient">
                   Technology
                 </span>{" "}
                 students nationwide, encouraging them to leverage technologies

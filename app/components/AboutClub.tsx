@@ -162,9 +162,13 @@ export const AboutClub = () => {
       </div>
 
       {/* --- UNIFIED STATISTICS SECTION --- */}
+
+      <h1 className="text-3xl md:text-6xl font-bold font-sans text-center text-color-gradient py-2">
+        Our key metrics
+      </h1>
       <div
         ref={ref}
-        className="grid grid-cols-3 md:px-[10vw] mt-[30px] md:mt-[60px] gap-y-8 md:gap-y-16 w-full justify-items-center font-sans"
+        className="grid grid-cols-3 md:px-[10vw] mt-[20px] md:mt-[40px] gap-y-8 md:gap-y-16 w-full justify-items-center font-sans"
       >
         {statsData.map((stat) => (
           <div

@@ -1,189 +1,119 @@
-"use client"
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Image from 'next/image';
-import React from 'react';
-import '../css/JudgeSection.css';
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
 import clsx from "clsx";
-import { HTMLAttributes } from "react";
-import { ChevronLeft, ChevronRight } from "tabler-icons-react";
+import { IconSparkles } from "@tabler/icons-react";
 
 interface JudgeInfo {
-	name: string,
-	title: string,
-	image_path: string,
+  name: string;
+  title: string;
+  image_path: string;
 }
 
-interface ArrowProps extends HTMLAttributes<HTMLDivElement> {
-	buttonOnClick?: () => void;
-}
-
-export const PreArrow: React.FC<ArrowProps> = ({ buttonOnClick, ...props }) => {
-	return (
-		<div {...props} className={clsx("absolute left-0 z-10", props.className)}>
-			<button
-				type="button"
-				title="Previous"
-				onClick={buttonOnClick}
-				className="absolute left-0 flex justify-center w-10 h-10 rounded-full bg-[#C93FDD] hover:bg-[#e74aff]"
-			>
-				<ChevronLeft size={40} className="relative right-[0.15rem]" color="white" />
-			</button>
-		</div>
-	);
+const allJudges = {
+  round1: [
+    { name: "Dr. Huy Pham", title: "Lecturer, Finance, RMIT Vietnam", image_path: "HuyPham-Round1.png" },
+    { name: "Dr. Minh Nguyen", title: "Lecturer, Blockchain Enabled Business, RMIT Vietnam", image_path: "MinhNguyen-Round1.png" },
+    { name: "Dr. Tam Le", title: "Lecturer, Blockchain Enabled Business, RMIT Vietnam", image_path: "TamLe-Round1.png" },
+    { name: "Dr. Tuan Chu", title: "Associate Program Manager, Undergraduate Business Programs, RMIT Vietnam", image_path: "TuanChu-Round1.png" },
+    { name: "Dr. Timothy McBush Hiele", title: "Lecturer, Digital Business, RMIT Vietnam", image_path: "TimothyHiele-Round1.png" },
+    { name: "Dr. Hieu Thai", title: "Lecturer, Blockchain Enabled Business, RMIT Vietnam", image_path: "HieuThai-Round1.png" },
+    { name: "Dr. Tri Dang", title: "Acting Associate Program Manager, IT&SE, RMIT Vietnam", image_path: "TriDang-Round1.png" },
+    { name: "Dr. Cherry Narumon Sriratanaviriyakul", title: "Lecturer, Entrepreneurship, RMIT Vietnam", image_path: "CherryNarumon-Round1.png" },
+    { name: "Dr. Hoang Phan", title: "Lecturer, STEM for Sustainable Development, RMIT Vietnam", image_path: "HoangPhan-Round1.png" },
+    { name: "Dr. Yen Nguyen", title: "Lecturer, Entrepreneurship, RMIT Vietnam", image_path: "YenNguyen-Round1.png" },
+  ],
+  round2: [],
+  round3: [],
 };
 
-export const NextArrow: React.FC<ArrowProps> = ({
-	buttonOnClick,
-	...props
-}) => {
-	return (
-		<div {...props} className={clsx("absolute z-10 right-0", props.className)}>
-			<button
-				type="button"
-				title="Next"
-				onClick={buttonOnClick}
-				className="absolute right-0 flex justify-center w-10 h-10 rounded-full bg-[#C93FDD] hover:bg-[#e74aff]"
-			>
-				<ChevronRight size={40} color="white" className="relative left-[0.15rem]" />
-			</button>
-		</div>
-	);
-};
 
+// --- REFACTORED JudgeItem to eliminate flickering ---
 const JudgeItem = (props: JudgeInfo) => {
-	const { name, title, image_path } = props;
-	return (
-		<div className="flex flex-col md:w-[250px] max-md:py-[16px] max-md:px-[24px] max-md:w-full text-center">
-			<Image src={`/judges/${image_path}`} alt={name} className="w-full h-auto rounded-xl mb-4 object-cover" width={200} height={200} />
-			<h3 className="md:text-2xl max-md:text-xl font-semibold mb-2 text-white">{name}</h3>
-			<p className="md:text-base max-md:text-md text-[#9CA3AF]">{title}</p>
-		</div>
-	)
-}
+  const { name, title, image_path } = props;
+  return (
+    <div className="relative group">
+      <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-yellow-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+      <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-yellow-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+      <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-green-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+      <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-green-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+
+      <div className="judge-card-shape flex flex-col h-full bg-gray-900/90 p-4 text-center backdrop-blur-sm transition-all duration-300 group-hover:bg-gray-900">
+        <div className="relative mb-4">
+          <Image
+            src={`/judges/${image_path}`}
+            alt={name}
+            className="w-full h-auto object-cover aspect-square"
+            width={200}
+            height={200}
+            style={{ 
+              clipPath: 'polygon(0 25px, 25px 0, 100% 0, 100% 100%, 0 100%)' 
+            }}
+          />
+          <div className="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-transparent via-green-400 to-transparent opacity-75 group-hover:opacity-100 group-hover:animate-pulse"></div>
+        </div>
+        <div className="flex flex-col flex-grow justify-start">
+            <h3 className="text-lg font-bold mb-2 text-green-color-gradient">{name}</h3>
+            <p className="text-base text-white font-medium flex-grow">{title}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 export const JudgeSection = () => {
-	const settings = {
-		dots: true,
-		prevArrow: <PreArrow />,
-		nextArrow: <NextArrow />,
-		// arrows: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 3,
-		initialSlide: 0,
-		slidesToScroll: 3,
-		responsive: [
-			{
-				breakpoint: 700,
-				settings: {
-					dots: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					swipeToSlide: true,
-				}
-			}
-		]
-	};
-	const judges = [
-		{
-			name: "Mr. Nhat Le",
-			title: "Founder & CEO, AirCity",
-			image_path: "Nhat_Le.png"
-		},
-		{
-			name: "Mr. Nghiem Sy Phu",
-			title: "Senior Cyber Security Manager, Fossil Group",
-			image_path: "Phu_Nghiem1.png"
-		},
-		{
-			name: "Mr. William Ross",
-			title: "CFA, Chief Marketing & Distribution Officer, Dragon Capital",
-			image_path: "Will_Ross.png"
-		},
-		{
-			name: "Dr. Huy Pham",
-			title: "Lecturer, Finance, RMIT Vietnam",
-			image_path: "Huy_Pham.png"
-		},
-		{
-			name: "Dr. Minh Nguyen",
-			title: "Lecturer, Blockchain, RMIT Vietnam",
-			image_path: "Minh_Nguyen.png"
-		},
-		{
-			name: "Dr. Ginel Dorleon",
-			title: "Lecturer, A.I., RMIT Vietnam",
-			image_path: "Ginel.png"
-		},
-		{
-			name: "Dr. Vinh Dang",
-			title: "Lecturer, Master of A.I., RMIT Vietnam",
-			image_path: "Vinh_Dang.png"
-		},
-		{
-			name: "Dr. Ling Huo Chong",
-			title: "Senior Lecturer, Software Engineering, RMIT Vietnam",
-			image_path: "Ling_Huo.png"
-		},
-		{
-			name: "Dr. Tuan Chu",
-			title: "Deputy Head, Bachelor of Business, RMIT Vietnam",
-			image_path: "Tuan_Chu.png"
-		},
-		{
-			name: "Dr. Minh Dinh",
-			title: "Senior Lecturer, A.I., RMIT Vietnam",
-			image_path: "Minh_Dinh.png"
-		},
-		{
-			name: "Dr. Timothy McBush Hiele",
-			title: "Lecturer, Digital Business RMIT Vietnam",
-			image_path: "Timothy_Hiele.png"
-		},
-		{
-			name: "Dr. Majo George",
-			title: "Senior Lecturer, Business & Law, RMIT Vietnam",
-			image_path: "Majo_George.png"
-		},
-		{
-			name: "Dr. Jeff Nijsse",
-			title: "Senior Lecturer, Software Engineering, RMIT Vietnam",
-			image_path: "Jeff_Nijsse.png"
-		},
-		{
-			name: "Dr. Muhammad Ashfa",
-			title: "Research Fellow, RMIT Vietnam",
-			image_path: "Mud_Ashfaq.png"
-		},
-		{
-			name: "Dr. Tam Le",
-			title: "Lecturer, Economics & Finance, RMIT Vietnam",
-			image_path: "Tam_Le.png"
-		},
-		{
-			name: "Dr. Son Ha",
-			title: "Lecturer, Blockchain, RMIT Vietnam",
-			image_path: "Son_Ha.png"
-		}
-	];
-	return (
-		<>
-			<div
-				style={{
-					background: "linear-gradient(0deg, #000000 0%, #111827 42%, #000000 100%)"
-				}}
-				className="mt-[60px]"
-			>
-				<h1 className="max-md:text-4xl md:text-6xl text-center text-white font-semibold md:px-[40px] max-md:mb-[20px] drop-shadow-text">Hack-A-Venture <span className="text-[#C93FDD]">Judges</span></h1>
-				<h2 className="max-md:text-2xl md:text-3xl text-center text-white font-semibold italic mt-[32px] md:px-[40px] max-md:mb-[20px]">(To be updated)</h2>
-				<div className="slider-container mx-auto w-[80vw] md:mt-[40px]">
-					<Slider {...settings}>
-						{judges.map((judge, key) => <JudgeItem key={key} name={judge.name} title={judge.title} image_path={judge.image_path} />)}
-					</Slider>
-				</div>
-			</div>
-		</>
-	)
-}
+  const [activeRound, setActiveRound] = useState(1);
+
+  const renderContent = () => {
+    if (activeRound === 1) {
+      return (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {allJudges.round1.map((judge, key) => (
+            <JudgeItem
+              key={key}
+              name={judge.name}
+              title={judge.title}
+              image_path={judge.image_path}
+            />
+          ))}
+        </div>
+      );
+    } else {
+        return (
+            <div className="relative h-64 p-px rounded-lg bg-gradient-to-b from-[#F37D12] to-[#FDE309]">
+                <div className="flex flex-col items-center justify-center w-full h-full bg-gradient-to-b from-[#10382C] to-[#0A1B15] rounded-[7px] text-center">
+                    <IconSparkles size={65} className="text-yellow-400 mb-4 animate-pulse" />
+                    <h3 className="text-3xl font-bold tracking-wider uppercase text-color-gradient">Stay Tuned</h3>
+                    <p className="mt-2 text-xl font-medium text-gray-400">The judges for Round {activeRound} will be unveiled shortly.</p>
+                </div>
+            </div>
+        );
+    }
+  };
+
+  return (
+    <div className="py-12 px-4 md:px-16">
+      <h1 className="max-md:text-4xl md:text-6xl text-center text-white font-semibold mb-8 drop-shadow-text">
+        Hack-A-Venture <span className="text-color-gradient">Judges</span>
+      </h1>
+      <div className="flex justify-center items-center gap-4 mb-12">
+        {[1, 2, 3].map((round) => (
+          <button
+            key={round}
+            onClick={() => setActiveRound(round)}
+            className={clsx(
+              "py-2 px-6 rounded-full text-lg font-semibold transition-all duration-300",
+              activeRound === round
+                ? "bg-gradient-to-r from-[#F37D12] to-[#FDE309] text-black shadow-lg"
+                : "bg-gray-800/80 text-gray-300 hover:bg-gray-700"
+            )}
+          >
+            Round {round}
+          </button>
+        ))}
+      </div>
+      <div className="container mx-auto w-full">{renderContent()}</div>
+    </div>
+  );
+};
