@@ -4,17 +4,17 @@ import { IconSpeakerphone } from "@tabler/icons-react";
 
 export const MentorSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-20">
+    <div className="flex flex-col items-center justify-center md:px-20 px-8 pt-4 md:pt-0">
       <h1 className="max-md:text-4xl md:text-6xl text-center text-white font-semibold mb-8 drop-shadow-text">
         Hack-A-Venture <span className="text-color-gradient">Mentors</span>
       </h1>
-      <div className="relative h-64 w-full p-px rounded-lg bg-gradient-to-b from-[#F37D12] to-[#FDE309] mb-16">
+      <div className="relative h-48 md:h-64 w-full p-px rounded-lg bg-gradient-to-b from-[#F37D12] to-[#FDE309] mb-12 md:mb-16">
         <div className="flex flex-col items-center justify-center w-full h-full bg-gradient-to-b from-[#10382C] to-[#0A1B15] rounded-[7px] text-center">
           <IconSpeakerphone
             size={65}
-            className="text-yellow-400 mb-4 animate-pulse"
+            className="max-md:w-[50px] text-yellow-400 max-md:mb-2 md:mb-4 animate-pulse"
           />
-          <h3 className="text-3xl font-bold tracking-wider uppercase text-color-gradient">
+          <h3 className="md:text-3xl max-md:text-2xl font-bold tracking-wider uppercase text-color-gradient">
             Revealing Soon!
           </h3>
         </div>

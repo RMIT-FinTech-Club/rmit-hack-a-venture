@@ -216,7 +216,7 @@ const Navigation = ({
         >
           <a
             href="/"
-            className={`hover:text-white text-[#9CA3AF] font-normal  cursor-pointer`}
+            className={`text-white font-normal cursor-pointer`}
           >
             <h1>About Hack-A-Venture</h1>
           </a>
@@ -230,7 +230,7 @@ const Navigation = ({
           <a
             href="https://bit.ly/RMITHack-A-Venture2025RulesandRegulations"
             target="_blank"
-            className={`hover:text-white text-[#9CA3AF] font-normal cursor-pointer`}
+            className={`text-white font-normal cursor-pointer`}
           >
             <h1>Rules & Regulations</h1>
           </a>
@@ -242,7 +242,7 @@ const Navigation = ({
           whileTap={{ scale: 0.95 }}
         >
           <a
-            className={`hover:text-white text-[#9CA3AF] font-normal  cursor-pointer`}
+            className={`text-white font-normal cursor-pointer`}
             href="#hackaventure-sponsors"
           >
             <h1>Our Sponsors & Partners</h1>

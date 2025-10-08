@@ -73,6 +73,8 @@ export const AboutClub = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
+    autoplay: true, 
+    autoplaySpeed: 5000,
   };
 
   const titleVariants = {

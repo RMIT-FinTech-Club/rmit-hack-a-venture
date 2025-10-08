@@ -132,13 +132,17 @@ export const AcademicMentor = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
   };
 
   return (
     <div className="px-10 pb-10">
-      <h1 className="max-md:text-4xl md:text-6xl text-center text-white font-semibold mb-8 drop-shadow-text">
+      <h1 className="max-md:hidden md:block md:text-6xl text-center text-white font-semibold mb-8 drop-shadow-text">
         Hack-A-Venture <span className="text-color-gradient">Academic Mentors</span>
+      </h1>
+
+      <h1 className="max-md:block md:hidden max-md:text-4xl text-center text-white font-semibold mb-8 drop-shadow-text">
+        Hack-A-Venture<br/><span className="text-color-gradient">Academic Mentors</span>
       </h1>
 
       {/* Desktop View: Flex layout */}

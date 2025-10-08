@@ -3,7 +3,6 @@ import React, { FC, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-// Main component - no changes needed here
 export const WorkshopTimeline = () => {
   return (
     <section className="w-full flex flex-col items-center md:px-20 max-md:px-10 max-md:mt-[40px] md:mt-[20px] overflow-x:hidden">
@@ -108,12 +107,12 @@ const RoundFormatTimeline = () => {
   return (
     <section className="w-full flex flex-col items-center">
       <RoundedTimelineHeader text="ROUND FORMAT" />
-      <p className="text-white text-[24px] font-bold mt-[30px] mb-[10px] max-md:hidden">
+      <p className="text-white text-[24px] font-bold mt-[30px] md:mb-[10px] max-md:mb-0">
         Round
       </p>
 
       {/* Map over data to render timeline items */}
-      <div className="w-full">
+      <div className="w-full flex flex-col items-center">
         {roundFormatData.map((item, index) => (
           <DetailTimeLine
             key={index}
@@ -131,16 +130,16 @@ const TrainingWorkshopTimeline = () => {
   return (
     <section className="w-[100%] flex flex-col items-center md:mt-[40px]">
       <RoundedTimelineHeader text="TRAINING WORKSHOPS" />
-      <p className=" hidden lg:inline-block text-xl font-medium mt-[30px] mb-[30px] text-[#91DAAE]">
+      <p className="text-center text-xl font-medium my-[30px] text-[#91DAAE]">
         To support participants, Hack-A-Venture 2025 will provide a series of
         workshops
       </p>
-      <p className="text-white text-[24px] font-bold mb-[10px] mt-[70px] lg:mt-0 max-md:hidden">
+      <p className="text-white text-[24px] font-bold">
         Workshop
       </p>
 
       {/* Map over data to render timeline items */}
-      <div className="w-full">
+      <div className="w-full flex flex-col items-center">
         {trainingWorkshopData.map((item, index) => (
           <DetailTimeLine
             key={index}
@@ -156,7 +155,7 @@ const TrainingWorkshopTimeline = () => {
 
 const RoundedTimelineHeader: React.FC<{ text: string }> = ({ text }) => {
   return (
-    <div className="text-white text-[20px] lg:text-[24px] font-semibold py-2 px-6 rounded-full text-2xl shadow-md max-md:mt-[24px] md:mt-[30px] bg-gradient-to-b from-[#F37D12] to-[#FDE309]">
+    <div className="text-white text-[20px] md:text-[24px] font-semibold py-2 px-6 rounded-full text-2xl shadow-md max-md:mt-[24px] md:mt-[30px] bg-gradient-to-b from-[#F37D12] to-[#FDE309]">
       {text}
     </div>
   );
@@ -226,7 +225,7 @@ const DetailTimeLine: React.FC<{
   return (
     <>
       {/*----------- laptop version (CSS GRID) ---------*/}
-      <div className="relative w-full lg:grid hidden grid-cols-[1fr_auto_1fr] items-start gap-x-8">
+      <div className="relative w-full md:grid hidden grid-cols-[1fr_auto_1fr] items-start gap-x-8">
         {props.rightSideOfTextSection ? (
           <div>{/* Empty Left Column */}</div>
         ) : (
@@ -243,7 +242,7 @@ const DetailTimeLine: React.FC<{
       </div>
 
       {/*----------- mobile version (FLEX COL) ---------*/}
-      <section className="w-[90%] flex flex-col items-center gap-[15px] my-[30px] lg:hidden">
+      <section className="w-[90%] flex flex-col items-center gap-[15px] my-[30px] md:hidden">
         <MilestoneRound
           rounded={props.rounded}
           numberOfOrder={props.numberOfOrder}
@@ -307,8 +306,8 @@ const MilestoneRound: React.FC<{ rounded: boolean; numberOfOrder: number }> = ({
       className={`${
         rounded
           ? "rounded-full border-[12px] w-[92px] h-[92px]"
-          : "rounded-lg border-[4px] w-[68px] h-[68px]"
-      } border-[#F37D12] bg-[#FDE309] shadow-lg flex items-center justify-center text-[32px] font-bold flex-shrink-0`}
+          : "rounded-md border-[4px] w-[68px] h-[68px]"
+      } border-[#F37D12] bg-[#FDE309] shadow-md flex items-center justify-center text-[32px] font-bold flex-shrink-0`}
       style={{
         boxShadow: "0 0 5px 7px #291231",
       }}
@@ -323,7 +322,7 @@ const TimelineRange: React.FC<{ timeRangeText: string }> = ({
 }) => {
   return (
     <h3
-      className={`flex-shrink-0 w-fit p-2 rounded-lg bg-gradient-to-b from-[#01985C] to-[#2DC6D2] text-center text-[16px] lg:text-[18px] font-semibold text-[#000000]`}
+      className={`flex-shrink-0 w-fit p-2 rounded-md bg-gradient-to-b from-[#01985C] to-[#2DC6D2] text-center text-[16px] md:text-[18px] font-semibold text-[#000000]`}
     >
       {timeRangeText}
     </h3>
@@ -374,7 +373,7 @@ const TextSection: React.FC<{
       >
         {subHeadline}
       </h2>
-      <p className={`text-white text-lg font-medium ${!paragraph && "hidden"}`}>
+      <p className={`text-white text-md font-medium ${!paragraph && "hidden"}`}>
         {paragraph}
       </p>
     </div>

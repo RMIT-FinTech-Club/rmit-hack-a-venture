@@ -56,7 +56,7 @@ export const PrizeSection = () => {
   return (
     <div
       ref={ref}
-      className="text-white flex flex-col md:mt-[60px] max-md:px-10 max-md:mt-[20px] text-center"
+      className="text-white flex flex-col md:mt-[60px] max-md:px-10 max-md:mt-0 text-center"
     >
       {/* --- HEADING SECTION --- */}
       <motion.div

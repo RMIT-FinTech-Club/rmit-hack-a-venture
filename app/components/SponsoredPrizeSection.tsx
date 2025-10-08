@@ -37,11 +37,11 @@ export const SponsoredPrizeSection = () => {
     className="w-full md:px-20"
     ref={ref}
   >
-    <h1 className="mt-[50px] text-4xl font-semibold text-white drop-shadow-text md:text-6xl text-center">
+    <h1 className="mt-[30px] md:mt-[50px] text-3xl font-semibold text-white drop-shadow-text md:text-6xl text-center">
       Special Category <span className="text-color-gradient">Awards</span>
     </h1>
 
-    <div className="flex w-full flex-col gap-8 text-[#FBF6FD] md:flex-row">
+    <div className="flex w-full flex-col gap-4 md:gap-8 text-[#FBF6FD] md:flex-row">
       <div className="flex flex-1 flex-col items-center text-center">
         <Image
           src="/MostTechnicallyAdvancedProject.png"
@@ -66,8 +66,11 @@ export const SponsoredPrizeSection = () => {
           height={150}
         />
         <div className="drop-shadow-container">
-          <h3 className="text-2xl font-semibold drop-shadow-text md:text-3xl mb-2">
+          <h3 className="text-2xl font-semibold drop-shadow-text md:text-3xl mb-2 hidden md:block">
             Most Market<br/>Potential Project
+          </h3>
+          <h3 className="text-2xl font-semibold drop-shadow-text md:text-3xl mb-2 md:hidden block">
+            Most Market Potential Project
           </h3>
         </div>
       </div>
